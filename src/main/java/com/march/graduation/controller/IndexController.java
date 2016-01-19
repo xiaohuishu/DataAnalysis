@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -18,6 +19,7 @@ public class IndexController implements InitializingBean {
 
     private static final Logger logger = LoggerFactory.getLogger(IndexController.class);
 
+
     @RequestMapping(method = { RequestMethod.GET, RequestMethod.HEAD })
     public ModelAndView index() {
         return new ModelAndView("index");
@@ -25,6 +27,6 @@ public class IndexController implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-
+        Assert.notNull("shellRuntimeHandler", "shellRuntimeHandler must not be blank");
     }
 }

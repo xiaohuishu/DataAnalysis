@@ -1,18 +1,22 @@
-<!DOCTYPE html>
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
 <html class="no-js">
     
     <head>
         <title>Admin Home Page</title>
+
         <!-- Bootstrap -->
         <link href="<%=request.getContextPath()%>/styles/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="<%=request.getContextPath()%>styles/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-        <link href="<%=request.getContextPath()%>styles/vendors/easypiechart/jquery.easy-pie-chart.css" rel="stylesheet" media="screen">
-        <link href="<%=request.getContextPath()%>styles/assets/styles.css" rel="stylesheet" media="screen">
+        <link href="<%=request.getContextPath()%>/styles/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link href="<%=request.getContextPath()%>/styles/vendors/easypiechart/jquery.easy-pie-chart.css" rel="stylesheet" media="screen">
+        <link href="<%=request.getContextPath()%>/styles/assets/styles.css" rel="stylesheet" media="screen">
+        <!--/.fluid-container-->
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/styles/vendors/morris/morris.css">
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        <script src="<%=request.getContextPath()%>styles/vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
     </head>
     
     <body>
@@ -134,7 +138,7 @@
                             <a href="index.jsp"><i class="icon-chevron-right"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="<%=request.getContextPath()%>/templates/analysis/calendar.jsp"><i class="icon-chevron-right"></i> Calendar</a>
+                            <a href="analysis/calendar.jsp"><i class="icon-chevron-right"></i> Calendar</a>
                         </li>
                         <li>
                             <a href="analysis/stats.jsp"><i class="icon-chevron-right"></i> Statistics (Charts)</a>
@@ -185,63 +189,73 @@
                 <div class="span9" id="content">
                     <div class="row-fluid">
                         <div class="alert alert-success">
-							<button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
                             <h4>Success</h4>
-                        	The operation completed successfully</div>
-                        	<div class="navbar">
-                            	<div class="navbar-inner">
-	                                <ul class="breadcrumb">
-	                                    <i class="icon-chevron-left hide-sidebar"><a href='#' title="Hide Sidebar" rel='tooltip'>&nbsp;</a></i>
-	                                    <i class="icon-chevron-right show-sidebar" style="display:none;"><a href='#' title="Show Sidebar" rel='tooltip'>&nbsp;</a></i>
-	                                    <li>
-	                                        <a href="#">Dashboard</a> <span class="divider">/</span>	
-	                                    </li>
-	                                    <li>
-	                                        <a href="#">Settings</a> <span class="divider">/</span>	
-	                                    </li>
-	                                    <li class="active">Tools</li>
-	                                </ul>
-                            	</div>
-                        	</div>
-                    	</div>
+                            The operation completed successfully</div>
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <ul class="breadcrumb">
+                                    <i class="icon-chevron-left hide-sidebar"><a href='#' title="Hide Sidebar" rel='tooltip'>&nbsp;</a></i>
+                                    <i class="icon-chevron-right show-sidebar" style="display:none;"><a href='#' title="Show Sidebar" rel='tooltip'>&nbsp;</a></i>
+                                    <li>
+                                        <a href="#">Dashboard</a> <span class="divider">/</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">Settings</a> <span class="divider">/</span>
+                                    </li>
+                                    <li class="active">Tools</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="row-fluid">
                         <!-- block -->
                         <div class="block">
                             <div class="navbar navbar-inner block-header">
-                                <div class="muted pull-left">Statistics</div>
-                                <div class="pull-right"><span class="badge badge-warning">View More</span>
+                                <div id="systemState" class="muted pull-left">系统状态</div>
+                                <div class="pull-right"><span class="badge badge-info">3</span>
 
                                 </div>
                             </div>
+
                             <div class="block-content collapse in">
+                                <button id="start" class="btn btn-primary">开始实时监控</button>
+                                <button id="stop" class="btn btn-primary">停止实时监控</button>
+                                <br />
                                 <div class="span3">
-                                    <div class="chart" data-percent="73">73%</div>
-                                    <div class="chart-bottom-heading"><span class="label label-info">Visitors</span>
+                                    <div class="chart" data-percent="50"><span id="cpuRate">加载中...</span></div>
+                                    <div class="chart-bottom-heading"><span class="label label-info">CPU使用率</span>
 
                                     </div>
                                 </div>
-                                <div class="span3">
-                                    <div class="chart" data-percent="53">53%</div>
-                                    <div class="chart-bottom-heading"><span class="label label-info">Page Views</span>
-
-                                    </div>
+                                <div class="span3" style="float: right">
+                                    <table class="table table-bordered table-striped">
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="label">服务器总内存</span>
+                                            </td>
+                                            <td>
+                                                <span id="totalMemory">加载中...</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="label">服务器剩余内存</span>
+                                            </td>
+                                            <td>
+                                                <span id="freeMemory">加载中...</span>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <div class="span3">
-                                    <div class="chart" data-percent="83">83%</div>
-                                    <div class="chart-bottom-heading"><span class="label label-info">Users</span>
 
-                                    </div>
-                                </div>
-                                <div class="span3">
-                                    <div class="chart" data-percent="13">13%</div>
-                                    <div class="chart-bottom-heading"><span class="label label-info">Orders</span>
-
-                                    </div>
-                                </div>
                             </div>
                         </div>
-                        <!-- /block -->
                     </div>
+
                     <div class="row-fluid">
                         <div class="span6">
                             <!-- block -->
@@ -506,16 +520,106 @@
             <footer>
                 <p>&copy; Vincent Gabriel 2013</p>
             </footer>
+            <div id="message"></div>
         </div>
         <!--/.fluid-container-->
-        <script src="<%=request.getContextPath()%>styles/vendors/jquery-1.9.1.min.js"></script>
-        <script src="<%=request.getContextPath()%>styles/bootstrap/js/bootstrap.min.js"></script>
-        <script src="<%=request.getContextPath()%>styles/vendors/easypiechart/jquery.easy-pie-chart.js"></script>
-        <script src="<%=request.getContextPath()%>styles/assets/scripts.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/jquery-1.9.1.min.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/bootstrap/js/bootstrap.min.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/easypiechart/jquery.easy-pie-chart.js"></script>
+
+        <script src="<%=request.getContextPath()%>/styles/vendors/jquery.knob.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/raphael-min.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/morris/morris.min.js"></script>
+
+        <script src="<%=request.getContextPath()%>/styles/vendors/flot/jquery.flot.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/flot/jquery.flot.categories.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/flot/jquery.flot.pie.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/flot/jquery.flot.time.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/flot/jquery.flot.stack.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/flot/jquery.flot.resize.js"></script>
+
+        <script src="<%=request.getContextPath()%>/styles/assets/scripts.js"></script>
         <script>
         $(function() {
+            // Morris Bar Chart
             // Easy pie charts
             $('.chart').easyPieChart({animate: 1000});
+
+            var updater = {
+                'stop' : false,
+                'rate' : 50,
+                nowTime: function() {
+                    var today = new Date();
+                    var year = today.getFullYear();
+                    var mouth = today.getMonth() + 1;
+                    var day = today.getDate();
+                    var str = "" + year + "年";
+                    str += mouth + "月";
+                    str += day + "日";
+
+                    var h=today.getHours();
+                    var m=today.getMinutes();
+                    m=checkTime(m);
+                    h=checkTime(h);
+                    $('#systemState').html("系统状态(" + str + " " + h + ":" + m + ")");
+                    interval = window.setTimeout(updater.nowTime, (60 - today.getSeconds()) * 1000);
+                    //个位数 补0
+                    function checkTime(i)
+                    {
+                        if(i<10)
+                        {i="0"+i}
+                        return i
+                    }
+                },
+                draw: function(rate) {
+                    $('.chart').each(function() {
+                        $(this).data('easyPieChart').update(rate);
+                        $(this).attr('data-percent', rate);
+                        $('#cpuRate').text(rate + '%');
+                    });
+                },
+                poll: function(){
+                    $.ajax({url: "/monitorSystemState",
+                        type: "POST",
+                        dataType: "text",
+                        success: updater.onSuccess,
+                        error: updater.onError});
+                },
+                onSuccess: function(data, dataStatus){
+                    try{
+                        if(data) {
+                            var res = String($.trim(data));
+                            var dataArray = res.split("\t");
+                            updater.rate = parseInt(dataArray[0] * 100);
+                            $("#totalMemory").text(' ' + dataArray[1]);
+                            $("#freeMemory").text(' ' + dataArray[2]);
+                        }
+                    }
+                    catch(e){
+                        updater.onError();
+                        return;
+                    }
+                    updater.draw(updater.rate);
+                    if(!updater.stop) {
+                        interval = window.setTimeout(updater.poll, 1);
+                    }
+                },
+                onError: function(){
+                    console.log("Poll error;");
+                }
+            };
+            updater.poll();
+            updater.nowTime();
+
+            $('#stop').bind("click",function(){
+                updater.stop = true;
+                updater.draw(15);
+            });
+
+            $('#start').bind("click",function(){
+                updater.stop = false;
+                updater.poll();
+            });
         });
         </script>
     </body>

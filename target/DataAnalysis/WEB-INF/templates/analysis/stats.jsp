@@ -4,15 +4,15 @@
     <head>
         <title>Statistics</title>
         <!-- Bootstrap -->
-        <link href="<%=request.getContextPath()%>/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="<%=request.getContextPath()%>/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-        <link href="<%=request.getContextPath()%>/assets/styles.css" rel="stylesheet" media="screen">
-        <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="<%=request.getContextPath()%>/vendors/flot/excanvas.min.js"></script><![endif]-->
+        <link href="<%=request.getContextPath()%>/styles/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="<%=request.getContextPath()%>/styles/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link href="<%=request.getContextPath()%>/styles/assets/styles.css" rel="stylesheet" media="screen">
+        <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="<%=request.getContextPath()%>/styles/vendors/flot/excanvas.min.js"></script><![endif]-->
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        <script src="<%=request.getContextPath()%>/vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     
     <body>
@@ -345,23 +345,23 @@
             </footer>
         </div>
         <!--/.fluid-container-->
-        <link rel="stylesheet" href="<%=request.getContextPath()%>/vendors/morris/morris.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/styles/vendors/morris/morris.css">
 
 
-        <script src="<%=request.getContextPath()%>/vendors/jquery-1.9.1.min.js"></script>
-        <script src="<%=request.getContextPath()%>/vendors/jquery.knob.js"></script>
-        <script src="<%=request.getContextPath()%>/vendors/raphael-min.js"></script>
-        <script src="<%=request.getContextPath()%>/vendors/morris/morris.min.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/jquery-1.9.1.min.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/jquery.knob.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/raphael-min.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/morris/morris.min.js"></script>
 
-        <script src="<%=request.getContextPath()%>/bootstrap/js/bootstrap.min.js"></script>
-        <script src="<%=request.getContextPath()%>/vendors/flot/jquery.flot.js"></script>
-        <script src="<%=request.getContextPath()%>/vendors/flot/jquery.flot.categories.js"></script>
-        <script src="<%=request.getContextPath()%>/vendors/flot/jquery.flot.pie.js"></script>
-        <script src="<%=request.getContextPath()%>/vendors/flot/jquery.flot.time.js"></script>
-        <script src="<%=request.getContextPath()%>/vendors/flot/jquery.flot.stack.js"></script>
-        <script src="<%=request.getContextPath()%>/vendors/flot/jquery.flot.resize.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/bootstrap/js/bootstrap.min.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/flot/jquery.flot.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/flot/jquery.flot.categories.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/flot/jquery.flot.pie.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/flot/jquery.flot.time.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/flot/jquery.flot.stack.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/flot/jquery.flot.resize.js"></script>
 
-        <script src="<%=request.getContextPath()%>/assets/scripts.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/assets/scripts.js"></script>
         <script>
         $(function() {
             var data = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];

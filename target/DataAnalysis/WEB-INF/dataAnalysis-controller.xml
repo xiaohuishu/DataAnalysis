@@ -12,4 +12,8 @@
 
     </bean>
 
+    <bean id="monitorCometController" class="com.march.graduation.controller.MonitorCometController">
+
+    </bean>
+
 </beans>

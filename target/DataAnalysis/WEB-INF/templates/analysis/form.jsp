@@ -4,16 +4,16 @@
 <head>
     <title>Forms</title>
     <!-- Bootstrap -->
-    <link href="<%=request.getContextPath()%>/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="<%=request.getContextPath()%>/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-    <link href="<%=request.getContextPath()%>/assets/styles.css" rel="stylesheet" media="screen">
+    <link href="<%=request.getContextPath()%>/styles/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="<%=request.getContextPath()%>/styles/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="<%=request.getContextPath()%>/styles/assets/styles.css" rel="stylesheet" media="screen">
     <!--[if lte IE 8]>
     <script language="javascript" type="text/javascript" src="vendors/flot/excanvas.min.js"></script><![endif]-->
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script src="<%=request.getContextPath()%>/vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="<%=request.getContextPath()%>/styles/vendors/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 </head>
 
 <body>
@@ -674,27 +674,27 @@
     </footer>
 </div>
 <!--/.fluid-container-->
-<link href="<%=request.getContextPath()%>/vendors/datepicker.css" rel="stylesheet" media="screen">
-<link href="<%=request.getContextPath()%>/vendors/uniform.default.css" rel="stylesheet" media="screen">
-<link href="<%=request.getContextPath()%>/vendors/chosen.min.css" rel="stylesheet" media="screen">
+<link href="<%=request.getContextPath()%>/styles/vendors/datepicker.css" rel="stylesheet" media="screen">
+<link href="<%=request.getContextPath()%>/styles/vendors/uniform.default.css" rel="stylesheet" media="screen">
+<link href="<%=request.getContextPath()%>/styles/vendors/chosen.min.css" rel="stylesheet" media="screen">
 
-<link href="<%=request.getContextPath()%>/vendors/wysiwyg/bootstrap-wysihtml5.css" rel="stylesheet" media="screen">
+<link href="<%=request.getContextPath()%>/styles/vendors/wysiwyg/bootstrap-wysihtml5.css" rel="stylesheet" media="screen">
 
-<script src="<%=request.getContextPath()%>/vendors/jquery-1.9.1.js"></script>
-<script src="<%=request.getContextPath()%>/bootstrap/js/bootstrap.min.js"></script>
-<script src="<%=request.getContextPath()%>/vendors/jquery.uniform.min.js"></script>
-<script src="<%=request.getContextPath()%>/vendors/chosen.jquery.min.js"></script>
-<script src="<%=request.getContextPath()%>/vendors/bootstrap-datepicker.js"></script>
+<script src="<%=request.getContextPath()%>/styles/vendors/jquery-1.9.1.js"></script>
+<script src="<%=request.getContextPath()%>/styles/bootstrap/js/bootstrap.min.js"></script>
+<script src="<%=request.getContextPath()%>/styles/vendors/jquery.uniform.min.js"></script>
+<script src="<%=request.getContextPath()%>/styles/vendors/chosen.jquery.min.js"></script>
+<script src="<%=request.getContextPath()%>/styles/vendors/bootstrap-datepicker.js"></script>
 
-<script src="<%=request.getContextPath()%>/vendors/wysiwyg/wysihtml5-0.3.0.js"></script>
-<script src="<%=request.getContextPath()%>/vendors/wysiwyg/bootstrap-wysihtml5.js"></script>
+<script src="<%=request.getContextPath()%>/styles/vendors/wysiwyg/wysihtml5-0.3.0.js"></script>
+<script src="<%=request.getContextPath()%>/styles/vendors/wysiwyg/bootstrap-wysihtml5.js"></script>
 
-<script src="<%=request.getContextPath()%>/vendors/wizard/jquery.bootstrap.wizard.min.js"></script>
+<script src="<%=request.getContextPath()%>/styles/vendors/wizard/jquery.bootstrap.wizard.min.js"></script>
 
-<script type="text/javascript" src="<%=request.getContextPath()%>/vendors/jquery-validation/dist/jquery.validate.min.js"></script>
-<script src="<%=request.getContextPath()%>/assets/form-validation.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/styles/vendors/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="<%=request.getContextPath()%>/styles/assets/form-validation.js"></script>
 
-<script src="<%=request.getContextPath()%>/assets/scripts.js"></script>
+<script src="<%=request.getContextPath()%>/styles/assets/scripts.js"></script>
 <script>
 
     jQuery(document).ready(function () {

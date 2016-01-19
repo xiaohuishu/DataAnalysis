@@ -4,15 +4,15 @@
     <head>
         <title>Interface</title>
         <!-- Bootstrap -->
-        <link href="<%=request.getContextPath()%>/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-        <link href="<%=request.getContextPath()%>/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-        <link href="<%=request.getContextPath()%>/assets/styles.css" rel="stylesheet" media="screen">
-        <link href="<%=request.getContextPath()%>/vendors/jGrowl/jquery.jgrowl.css" rel="stylesheet" media="screen">
+        <link href="<%=request.getContextPath()%>/styles/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="<%=request.getContextPath()%>/styles/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link href="<%=request.getContextPath()%>/styles/assets/styles.css" rel="stylesheet" media="screen">
+        <link href="<%=request.getContextPath()%>/styles/vendors/jGrowl/jquery.jgrowl.css" rel="stylesheet" media="screen">
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        <script src="<%=request.getContextPath()%>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     </head>
     
     <body>
@@ -571,10 +571,10 @@
             </footer>
         </div>
         <!--/.fluid-container-->
-        <script src="<%=request.getContextPath()%>/vendors/jquery-1.9.1.min.js"></script>
-        <script src="<%=request.getContextPath()%>/bootstrap/js/bootstrap.min.js"></script>
-        <script src="<%=request.getContextPath()%>/vendors/jGrowl/jquery.jgrowl.js"></script>
-        <script src="<%=request.getContextPath()%>/assets/scripts.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/styles/vendors/jquery-1.9.1.min.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/bootstrap/js/bootstrap.min.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/jGrowl/jquery.jgrowl.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/assets/scripts.js"></script>
         <script>
         $(function() {
             $('.tooltip').tooltip();	
