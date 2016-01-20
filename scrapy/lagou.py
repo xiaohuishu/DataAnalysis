@@ -10,7 +10,6 @@ import json
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-
 def convert_pinyin(str):
     length = len("我")
     intord = ord(str[0:1])
@@ -25,14 +24,12 @@ def convert_pinyin(str):
             if str in line:
                 return line[length:len(line) - 3]
 
-
 def cur_file_dir():
     path = sys.path[0]
     if os.path.isdir(path):
         return path
     elif os.path.isfile(path):
         return os.path.dirname(path)
-
 
 def http_get(url):
     try:
@@ -44,7 +41,6 @@ def http_get(url):
             print u"连接失败， 错误原因: ", e.reason
             return None
 
-
 def http_post(url, data):
     encodedata = urllib.urlencode(data)
     try:
@@ -55,7 +51,6 @@ def http_post(url, data):
         if hasattr(e, "reason"):
             print u"访问失败， 错误原因: ", e.reason
             return None
-
 
 class lagouIndex:
     def __init__(self, indexUrl):
@@ -77,7 +72,6 @@ class lagouIndex:
         with open(curdirpath + '/data/position.txt', 'w+') as write:
             for item in items:
                 write.writelines(item + '\n')
-
 
 class lagouPositionAndCompanyData:
     def __init__(self, baseUrl, position, city=None):
@@ -123,7 +117,6 @@ class lagouPositionAndCompanyData:
             url = url + 'city=' + self.city.encode('utf-8')
         http_post(url, self.build_formdata(page))
 
-
 def parseJson(jsonList, city, position):
     pinyin_city = city
     if city != 'all':
@@ -162,7 +155,6 @@ def parseJson(jsonList, city, position):
     else:
         with open(cur_file_dir() + '/data/positionData' + '_' + pinyin_city + '_' + pinyin_position + '.txt', 'w+') as f:
             pass
-
 
 baseUrl = 'http://www.lagou.com/jobs'
 jsonList = []
