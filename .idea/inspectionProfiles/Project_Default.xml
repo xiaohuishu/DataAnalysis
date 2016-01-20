@@ -23,6 +23,7 @@
           <option value="scrapy.lagou.len" />
           <option value="scrapy.lagou.ord" />
           <option value="scrapy.lagou.range" />
+          <option value="scrapy.lagou.unicode" />
         </list>
       </option>
     </inspection_tool>

@@ -117,25 +117,29 @@ class lagouPositionAndCompanyData:
             url = url + 'city=' + self.city.encode('utf-8')
         return http_post(url, self.build_formdata(page))
 
-    def getCompanyContent(self, city=None):
+    def getCompanyContent(self, page):
         url = self.baseUrl + '/companyAjax.json?'
         if self.city and self.city != 'all':
             url = url + 'city=' + self.city.encode('utf-8')
         http_post(url, self.build_formdata(page))
 
 
-def parseJson(jsonList, city):
+def parseJson(jsonList, city, position):
     pinyin_city = city
     if city != 'all':
-        if len(city) == 3:
-            str1 = convert_pinyin(city[0:1])
-            str2 = convert_pinyin(city[1:2])
-            str3 = convert_pinyin(city[2:3])
-            pinyin_city = str1 + str2 +str3
-        if len(city) == 2:
-            str1 = convert_pinyin(city[0:1])
-            str2 = convert_pinyin(city[1:2])
-            pinyin_city = str1 + str2
+        clist = []
+        for cindex in range(len(city)):
+            clist.append(convert_pinyin(city[cindex:cindex + 1]))
+        if clist:
+            pinyin_city = ''.join(clist)
+
+    pinyin_position = position
+    plist = []
+    for pindex in range(len(position)):
+        plist.append(convert_pinyin(position[pindex:pindex + 1]))
+
+    if plist:
+        pinyin_position = ''.join(plist)
 
     if jsonList:
         for jsonStr in jsonList:
@@ -143,7 +147,7 @@ def parseJson(jsonList, city):
             if jst['content']:
                 content = jst['content']['result']
                 if content:
-                    with open(cur_file_dir() + '/data/positionData' + '_' + pinyin_city + '.txt', 'a') as datawrite:
+                    with open(cur_file_dir() + '/data/positionData' + '_' + pinyin_city + '_' + pinyin_position + '.txt', 'a') as datawrite:
                         index = 0
                         for item in content:
                             index = index + 1
@@ -158,17 +162,21 @@ def parseJson(jsonList, city):
 
 
 baseUrl = 'http://www.lagou.com/jobs'
-position = 'Java'
-page = 1
-
 jsonList = []
-lagouPositionData = lagouPositionAndCompanyData(baseUrl, position, u"北京")
-totalPage = lagouPositionData.getTotalPageCount()
+argvs = sys.argv
+print argvs
+if len(argvs) == 3:
+    position = argvs[1]
+    city = argvs[2]
+    lagouPositionData = lagouPositionAndCompanyData(baseUrl, unicode(position, 'utf-8'), unicode(city, 'utf-8'))
+    totalPage = lagouPositionData.getTotalPageCount()
 
-for index in range(totalPage):
-    jsonList.append(lagouPositionData.getPositionContent(index+1))
+    for index in range(totalPage):
+        jsonList.append(lagouPositionData.getPositionContent(index + 1))
 
-parseJson(jsonList, lagouPositionData.city)
+    parseJson(jsonList, lagouPositionData.city, lagouPositionData.position)
+else:
+    print 'args not invalid'
 
 '''
 indexUrl = 'http://www.lagou.com/'

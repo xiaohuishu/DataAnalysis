@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans default-autowire="byName"
-       xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="propertyConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath*:default.properties</value>
+            </list>
+        </property>
+    </bean>
 
     <bean id="indexController" class="com.march.graduation.controller.IndexController">
-
+        <property name="crawRootPath" value="${path.crawRootPath}" />
     </bean>
 
     <bean id="userController" class="com.march.graduation.controller.UserController">
