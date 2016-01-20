@@ -577,7 +577,9 @@
     $(function () {
 
         var crawLagouData = {
-            'cityPinYin' : '',
+            'cityPinyin' : '',
+            'psTypePinyin' : '',
+
             crawData: function (city, psType) {
                 $.ajax({
                     url: "/index/crawlData",
@@ -589,13 +591,37 @@
                     error: crawLagouData.onError
                 });
             },
+            pollCrawState: function (psTypePinyin, cityPinyin) {
+                $.ajax({
+                    url: "/index/checkCrawData",
+                    type: "POST",
+                    data: {psTypePinyin : psTypePinyin, cityPinyin : cityPinyin},
+                    contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                    dataType: "text",
+                    success: crawLagouData.checkSuccess,
+                    error: crawLagouData.onError
+                });
+            },
+            checkSuccess: function (data, dataStatus) {
+                returnJson = eval("(" + data + ")");
+                $("#craw-Info").html("");
+                if(parseInt(returnJson.errcode) === 0) {
+                    $("#craw-Info").html("<div class='alert alert-success'><button type='button' class='close' data-dismiss='alert'>数据抓取成功</button><h4>完成</h4></div>");
+                } else {
+                    $("#craw-Info").html("<div class='alert alert-success'><button type='button' class='close' data-dismiss='alert'>后台正在处理数据...</button><h4>处理中...</h4></div>");
+                    window.setTimeout(crawLagouData.pollCrawState(crawLagouData.psTypePinyin, crawLagouData.cityPinyin), 10000);
+                }
+
+            },
             onSuccess: function (data, dataStatus) {
                 try {
                     returnJson = eval("(" + data + ")");
                     if(parseInt(returnJson.errcode) === 0) {
                         $("#craw-Info").html("");
-                        crawLagouData.cityPinYin = returnJson.data.cityPinyin;
+                        crawLagouData.cityPinyin = returnJson.data.cityPinyin;
+                        crawLagouData.psTypePinyin = returnJson.data.psTypePinyin;
                         $("#craw-Info").html("<div class='alert alert-success'><button type='button' class='close' data-dismiss='alert'>后台任务正在抓取数据，稍等...</button><h4>加载中...</h4></div>");
+                        crawLagouData.pollCrawState(crawLagouData.psTypePinyin, crawLagouData.cityPinyin);
                     } else {
                         $("#craw-Info").html("<div class='alert alert-success'><button type='button' class='close' data-dismiss='alert'>任务已经抓取完成，请先清理数据!</button><h4>提示</h4></div>");
                     }

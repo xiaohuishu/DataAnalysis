@@ -76,14 +76,12 @@ public class IndexController implements InitializingBean {
         }
     }
 
-
     @RequestMapping(value = "checkCrawData", method = RequestMethod.POST)
     public JsonAndView checkCrawData(@RequestParam(value = "cityPinyin", defaultValue = "") String cityPinyin,
             @RequestParam(value = "psTypePinyin", defaultValue = "") String psTypePinyin) {
         if (StringUtils.isBlank(cityPinyin) || StringUtils.isBlank(psTypePinyin)) {
             return AnalysisResultCode.ILLEGAL_ERROR.getJsonAndView();
         }
-        logger.info(cityPinyin);
         File cityData = Paths.get(crawRootPath, "scrapy", "data", "positionData_" + cityPinyin + "_" + psTypePinyin + ".txt").toFile();
         if (cityData.exists()) {
             return AnalysisResultCode.SUCCESS_INFO.getJsonAndView();
@@ -105,7 +103,7 @@ public class IndexController implements InitializingBean {
         } catch (UnsupportedEncodingException e) {
             logger.error("decode failure: {}", e);
         }
-        String cityPinyin = "";
+        String cityPinyin;
         String psTypePinyin = "";
         if(StringUtils.equals(cityName, "全国")) {
             cityPinyin = "all";
@@ -140,6 +138,7 @@ public class IndexController implements InitializingBean {
         jsonAndView.addData("psType", positiopnType);
         jsonAndView.addData("city", cityName);
         jsonAndView.addData("cityPinyin", cityPinyin);
+        jsonAndView.addData("psTypePinyin", psTypePinyin);
 
         return jsonAndView;
     }

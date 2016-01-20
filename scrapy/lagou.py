@@ -159,6 +159,9 @@ def parseJson(jsonList, city, position):
                                 else:
                                     values = ','.join(value)
                                     datawrite.writelines(str(key) + '\t' + values + '\n')
+    else:
+        with open(cur_file_dir() + '/data/positionData' + '_' + pinyin_city + '_' + pinyin_position + '.txt', 'w+') as f:
+            pass
 
 
 baseUrl = 'http://www.lagou.com/jobs'
