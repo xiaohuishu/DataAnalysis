@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8625acb9-76e4-4bfc-9078-5fd4d0b01011" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy/lagou.py" afterPath="$PROJECT_DIR$/scrapy/lagou.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DataAnalysis.iws" />
@@ -73,8 +72,8 @@
       <file leaf-file-name="lagou.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scrapy/lagou.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.800227">
-              <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.2707151">
+              <caret line="99" column="64" selection-start-line="99" selection-start-column="64" selection-end-line="99" selection-end-column="64" />
               <folding>
                 <element signature="e#41#54#0" expanded="true" />
               </folding>
@@ -1203,12 +1202,12 @@
       <workItem from="1453118858000" duration="1310000" />
       <workItem from="1453120288472" duration="1059000" />
       <workItem from="1453167543827" duration="27977000" />
-      <workItem from="1453254416842" duration="35894000" />
+      <workItem from="1453254416842" duration="36029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87243000" />
+    <option name="totallyTimeSpent" value="87378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1365" y="0" width="1082" height="1921" extended-state="6" />
@@ -1313,18 +1312,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/march/graduation/web/interceptor/LoginInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="124" column="24" selection-start-line="124" selection-start-column="24" selection-end-line="124" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#7394#7395#0" expanded="false" />
-            <element signature="e#7442#7443#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.21/mysql-connector-java-5.1.21.pom">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1756,10 +1743,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scrapy/data/positionData_shanghai_hadoop.txt">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10167533">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scrapy/lagou.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.800227">
-          <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.2707151">
+          <caret line="99" column="64" selection-start-line="99" selection-start-column="64" selection-end-line="99" selection-end-column="64" />
           <folding>
             <element signature="e#41#54#0" expanded="true" />
           </folding>
