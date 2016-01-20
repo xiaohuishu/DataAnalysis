@@ -99,7 +99,6 @@ public class IndexController implements InitializingBean {
         try {
             cityName = URLDecoder.decode(cityName, "UTF-8");
             positiopnType = URLDecoder.decode(positiopnType, "UTF-8");
-            logger.info(cityName + "........." + positiopnType);
         } catch (UnsupportedEncodingException e) {
             logger.error("decode failure: {}", e);
         }
