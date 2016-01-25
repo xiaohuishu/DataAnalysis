@@ -124,37 +124,67 @@ def parseJson(jsonList, city, position):
         for cindex in range(len(city)):
             clist.append(convert_pinyin(city[cindex:cindex + 1]))
         if clist:
-            pinyin_city = ''.join(clist)
+            pinyin_city = ''.join(clist).replace("chong2,", "")
 
     pinyin_position = position
-    plist = []
-    for pindex in range(len(position)):
-        plist.append(convert_pinyin(position[pindex:pindex + 1]))
-
-    if plist:
-        pinyin_position = ''.join(plist)
 
     if jsonList:
+        totalPage = len(jsonList)
+        index = 1
         for jsonStr in jsonList:
             jst = json.loads(jsonStr)
             if jst['content']:
                 content = jst['content']['result']
                 if content:
-                    with open(cur_file_dir() + '/data/positionData' + '_' + pinyin_city + '_' + pinyin_position + '.txt', 'a') as datawrite:
-                        index = 0
+                    cur_dir = cur_file_dir() + '/data/positionData/'
+                    if os.path.isdir(cur_dir + pinyin_position):
+                        pass
+                    else:
+                        os.mkdir(cur_dir + pinyin_position)
+
+                    with open(cur_dir + pinyin_position + '/positionData' + '_' + pinyin_city + '_' + pinyin_position + '.json', 'a') as datawrite:
                         for item in content:
-                            index = index + 1
-                            datawrite.writelines('company' + str(index) + '\n')
-                            for key, value in item.items():
-                                # print key, value
-                                if not isinstance(value, list):
-                                    datawrite.writelines(str(key) + '\t' + str(value) + '\n')
-                                else:
-                                    values = ','.join(value)
-                                    datawrite.writelines(str(key) + '\t' + values + '\n')
+                            removeKeys = []
+                            for key in item.keys():
+                                if isinstance(item[key], list):
+                                    removeKeys.append(key)
+                            for removeKey in removeKeys:
+                                del item[removeKey]
+
+                        if index == 1 and index == totalPage:
+                            datawrite.writelines(str(content).replace('u\'', '\'').replace("\'", "\"")
+                                                 .replace("False", "\"False\"").replace("True", "\"True\"")
+                                                 .replace("None", "\"None\"").replace("\c", "/c").replace("\vc", "/c")
+                                                 .replace("\C", "/C").replace("\/", "/").replace("\(", "/")
+                                                 .replace("\VC", "/VC").replace("\N", "/N").replace("\n", "/n").decode("unicode-escape") + '\n')
+                        elif index == 1:
+                            datawrite.writelines(str(content).replace('u\'', '\'').replace("\'", "\"")
+                                                 .replace("False", "\"False\"").replace("True", "\"True\"")
+                                                 .replace("None", "\"None\"").replace('}]', '},').replace("\c", "/c").replace("\vc", "/c")
+                                                 .replace("\C", "/C").replace("\/", "/").replace("\(", "/")
+                                                 .replace("\VC", "/VC").replace("\N", "/N").replace("\n", "/n").decode("unicode-escape") + '\n')
+                        elif index < totalPage:
+                            datawrite.writelines(str(content).replace('u\'', '\'').replace("\'", "\"")
+                                                 .replace("False", "\"False\"").replace("True", "\"True\"")
+                                                 .replace("None", "\"None\"").replace('[{', '{').replace('}]', '},').replace("\c", "/c").replace("\vc", "/c")
+                                                 .replace("\C", "/C").replace("\/", "/").replace("\(", "/")
+                                                 .replace("\VC", "/VC").replace("\N", "/N").replace("\n", "/n").decode("unicode-escape") + '\n')
+                        elif index == totalPage:
+                            datawrite.writelines(str(content).replace('u\'', '\'').replace("\'", "\"")
+                                                 .replace("False", "\"False\"").replace("True", "\"True\"")
+                                                 .replace("None", "\"None\"").replace('[{', '{').replace("\c", "/c").replace("\vc", "/c")
+                                                 .replace("\C", "/C").replace("\/", "/").replace("\(", "/")
+                                                 .replace("\VC", "/VC").replace("\N", "/N").replace("\n", "/n").decode("unicode-escape") + '\n')
+                        index = index + 1
+
     else:
-        with open(cur_file_dir() + '/data/positionData' + '_' + pinyin_city + '_' + pinyin_position + '.txt', 'w+') as f:
+        cur_dir = cur_file_dir() + '/data/positionData/'
+        if os.path.isdir(cur_dir + pinyin_position):
             pass
+        else:
+            os.mkdir(cur_dir + pinyin_position)
+        with open(cur_dir + pinyin_position + '/data/positionData' + '_' + pinyin_city + '_' + pinyin_position + '.json', 'w+') as f:
+                pass
 
 baseUrl = 'http://www.lagou.com/jobs'
 jsonList = []

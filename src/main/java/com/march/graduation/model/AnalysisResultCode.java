@@ -18,7 +18,8 @@ public enum AnalysisResultCode {
     REPREATE_ERROR(1003, "重复错误"),
     NOT_EXIST_ERROR(1004, "不存在"),
 
-    SUCCESS_INFO(0, "成功");
+    SUCCESS_INFO(0, "成功"),
+    FAILURE_INFO(-1, "失败");
 
     AnalysisResultCode(int code, String errMsg) {
         this.code = code;
