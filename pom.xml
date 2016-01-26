@@ -224,14 +224,6 @@
             <version>2.5.0</version>
         </dependency>
 
-
-        <!-- qunar order -->
-        <dependency>
-            <groupId>qunar.tc.order</groupId>
-            <artifactId>ordercenter-consumer-api</artifactId>
-            <version>2.4.8</version>
-        </dependency>
-
         <!-- common rpc -->
         <dependency>
             <groupId>qunar.common</groupId>

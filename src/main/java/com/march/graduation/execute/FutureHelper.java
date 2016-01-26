@@ -9,18 +9,19 @@ import com.google.common.util.concurrent.MoreExecutors;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Executors;
 
-// ********************************************
+//********************************************
+// * guava listenableFuture包装类
 // * @author: xiaohui.shu
 // * @version: 日期: 16-1-22 时间: 下午1:24
-// ********************************************
+//********************************************
 public class FutureHelper {
 
-    private static final ListeningExecutorService LISTENABLE_FUTURE_Service = MoreExecutors
+    private static final ListeningExecutorService LISTENING_EXECUTOR_SERVICE = MoreExecutors
             .listeningDecorator(Executors.newFixedThreadPool(10));
 
     public static <T, F> void execute(final FutureHandler<T, F> futureHandler, final F... args) {
 
-        ListenableFuture listenableFuture = LISTENABLE_FUTURE_Service.submit(new Callable<Object>() {
+        ListenableFuture listenableFuture = LISTENING_EXECUTOR_SERVICE.submit(new Callable<Object>() {
             @Override
             public T call() throws Exception {
                 return futureHandler.handler(args);
