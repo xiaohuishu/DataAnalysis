@@ -550,6 +550,21 @@
                 });
             },
 
+            crawDataToDb : function (psType) {
+                $.ajax({
+                    url : "/index/crawDataToDb",
+                    type : "GET",
+                    data : { psType : psType },
+                    dataType : "text",
+                    success: function (data, dataStatus) {
+                        alert("正在后台加载数据至数据库...");
+                        crawDirList.crawDirList();
+                        $('#crawDataDbSubmit').remove();
+                    },
+                    error: crawDirList.onError
+                });
+            },
+
             pullCrawDataList : function (psType, isLoad) {
                 $.ajax({
                     url : "/index/crawData",
@@ -571,7 +586,12 @@
                             $('#crawDataShow #crawDataContent').append("</tbody></table>");
                             if (!isLoad) {
                                 $('#crawDataShow #crawDataFoot').html("<button class='btn' data-dismiss='modal' aria-hidden='true'>关闭" +
-                                        "</button><button class='btn btn-primary'>加载入库</button>");
+                                        "</button><button id='crawDataDbSubmit' class='btn btn-primary'>加载入库</button>");
+
+                                $('#crawDataDbSubmit').click(submitEvent);
+                                function submitEvent() {
+                                    crawDirList.crawDataToDb(psType);
+                                }
                             } else {
                                 $('#crawDataShow #crawDataFoot').html("<button class='btn' data-dismiss='modal' aria-hidden='true'>关闭</button>");
                             }
@@ -595,12 +615,12 @@
                             var isLoad;
                             if(strList.length == 1) {
                                 item = crawDirList.replaceSpecial(item);
-                                $("#crawDataList").append("<button id=" + item + " class='btn btn-primary'>" + item + "</button>&nbsp;");
+                                $("#crawDataList").append("<button id=" + item + " class='btn btn-primary'>" + item + "</button>&nbsp;&nbsp;");
                                 $('#' + item).click(clientEvent);
                                 isLoad = false;
                             } else {
                                 item = crawDirList.replaceSpecial(strList[0]);
-                                $("#crawDataList").append("<button id=" + item + " class='btn btn-inverse'>" + item + "目录数据已加载</button>");
+                                $("#crawDataList").append("<button id=" + item + " class='btn btn-inverse'>" + item + "目录数据已加载</button>&nbsp;&nbsp;");
                                 $('#' + item).click(clientEvent);
                                 isLoad = true;
                             }
@@ -755,6 +775,13 @@
                         updater.rate = parseInt(dataArray[0] * 100);
                         $("#totalMemory").text(' ' + dataArray[1]);
                         $("#freeMemory").text(' ' + dataArray[2]);
+                        if(dataArray.length == 4) {
+                            if (dataArray[3]) {
+                                alert("批量插入数据成功");
+                            } else {
+                                alert("批量插入数据失败，请检查");
+                            }
+                        }
                     }
                 }
                 catch (e) {

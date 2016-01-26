@@ -1,5 +1,7 @@
 package com.march.graduation.controller;
 
+import com.google.common.util.concurrent.ListenableFuture;
+import com.march.graduation.execute.FutureHelper;
 import com.march.graduation.system.SystemPropertiesTool;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,8 +33,9 @@ public class MonitorCometController implements InitializingBean {
 
         long [] memInfo = SystemPropertiesTool.processMemoryInfo();
         if(memInfo == null || memInfo.length <= 0) {
-        logger.error("read system memory info failure");
+            logger.error("read system memory info failure");
         } else {
+            ListenableFuture isSuccess = FutureHelper.futureThreadLocal.get();
             PrintWriter printWriter = null;
             try {
                 double rate = SystemPropertiesTool.caculCpuRate();
@@ -41,6 +44,10 @@ public class MonitorCometController implements InitializingBean {
                 printWriter.println(cpuRate + "\t");
                 printWriter.println(memInfo[0] + "\t");
                 printWriter.println(memInfo[1] + "\t");
+                if(isSuccess != null) {
+                    printWriter.println(isSuccess.isDone() + "\t");
+                    FutureHelper.futureThreadLocal.remove();
+                }
 
             } catch (IOException e) {
                 logger.error("response getWriter exception: {} ", e);

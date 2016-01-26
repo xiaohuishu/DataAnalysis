@@ -56,7 +56,7 @@
     <table name="position_data" schema="" catalog="analysis" type="TABLE">
       <column name="orderBy" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="leaderName" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
+      <column name="leaderName" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <column name="companySize" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
       <column name="deliverCount" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="flowScore" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>

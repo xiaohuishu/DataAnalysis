@@ -19,8 +19,6 @@ Android
 iOS
 WP
 web前端
-Flash
-html5
 JavaScript
 U3D
 COCOS2D-X

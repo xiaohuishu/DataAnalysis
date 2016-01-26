@@ -293,7 +293,7 @@ public class IndexController implements InitializingBean {
             cityPinyin = "all";
             cityName = cityPinyin;
         } else {
-            cityPinyin = HanyuConvertPinyinHelper.convertbyString(cityName).toLowerCase();
+            cityPinyin = HanyuConvertPinyinHelper.convertbyString(cityName).toLowerCase().replace("zhangchun", "changchun");
         }
         String psTypePinyin = HanyuConvertPinyinHelper.convertbyString(positiopnType).toLowerCase().replace(".",
                 "").replace("-", "");
@@ -309,8 +309,11 @@ public class IndexController implements InitializingBean {
         if (cityData.exists()) {
             return AnalysisResultCode.REPREATE_ERROR.getJsonAndView();
         }
-
         String args = psTypePinyin + " " + cityName;
+        if(psTypePinyin.startsWith("web")) {
+            args = positiopnType + " " + cityName;
+        }
+
         final String command = "python " + pythonFilePath + args;
         Thread thread = new Thread(new Runnable() {
             @Override

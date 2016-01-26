@@ -119,6 +119,7 @@ class lagouPositionAndCompanyData:
 
 def parseJson(jsonList, city, position):
     pinyin_city = city
+    pinyin_position = position
     if city != 'all':
         clist = []
         for cindex in range(len(city)):
@@ -126,7 +127,12 @@ def parseJson(jsonList, city, position):
         if clist:
             pinyin_city = ''.join(clist).replace("chong2,", "")
 
-    pinyin_position = position
+    if position.startswith('web'):
+        plist = []
+        for pindex in range(len(position)):
+            plist.append(convert_pinyin(position[pindex:pindex + 1]))
+        if plist:
+            pinyin_position = ''.join(plist)
 
     if jsonList:
         totalPage = len(jsonList)
@@ -142,7 +148,7 @@ def parseJson(jsonList, city, position):
                     else:
                         os.mkdir(cur_dir + pinyin_position)
 
-                    with open(cur_dir + pinyin_position + '/positionData' + '_' + pinyin_city + '_' + pinyin_position + '.json', 'a') as datawrite:
+                    with open(cur_dir + pinyin_position + '/positionData_' + pinyin_city + '_' + pinyin_position + '.json', 'a') as datawrite:
                         for item in content:
                             removeKeys = []
                             for key in item.keys():
@@ -183,7 +189,7 @@ def parseJson(jsonList, city, position):
             pass
         else:
             os.mkdir(cur_dir + pinyin_position)
-        with open(cur_dir + pinyin_position + '/data/positionData' + '_' + pinyin_city + '_' + pinyin_position + '.json', 'w+') as f:
+        with open(cur_dir + pinyin_position + '/positionData_' + pinyin_city + '_' + pinyin_position + '.json', 'w+') as f:
                 pass
 
 baseUrl = 'http://www.lagou.com/jobs'
