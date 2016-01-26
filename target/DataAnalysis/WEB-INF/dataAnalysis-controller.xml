@@ -24,10 +24,4 @@
     <bean id="monitorCometController" class="com.march.graduation.controller.MonitorCometController">
 
     </bean>
-
-    <bean id="orderController" class="com.march.graduation.controller.OrderController">
-        <property name="orderQueryService" ref="orderQueryService" />
-        <property name="orderActionService" ref="orderActionService" />
-    </bean>
-
 </beans>
