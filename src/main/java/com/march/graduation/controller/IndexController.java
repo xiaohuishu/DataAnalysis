@@ -129,7 +129,7 @@ public class IndexController implements InitializingBean {
         if(StringUtils.isBlank(psType) && StringUtils.isBlank(city)) {
             return AnalysisResultCode.ILLEGAL_ERROR.getJsonAndView();
         }
-        psType = replaceSpecial(psType.toLowerCase());
+        psType = replaceSpecial(psType.toLowerCase().replace(".", "").replace("-", ""));
 
         Condition condition = new Condition();
         condition.setValue(psType);
