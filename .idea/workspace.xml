@@ -2,556 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8625acb9-76e4-4bfc-9078-5fd4d0b01011" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/controller/AnalysisController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/constant/AnalysisSQLConstant.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/model/Condition.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/model/Limit.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_3_7_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/annotation/PropertyName.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/model/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy/batchlagou.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy/logger.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scrapy/pinyin.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_dubbo_2_3_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_0_8_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_sgroschupf_zkclient_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_concurrentlinkedhashmap_concurrentlinkedhashmap_lru_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_libphonenumber_libphonenumber_7_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_qunar_base_meerkat_monitor_1_3_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_3_4_1_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_0_0_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_lgpl_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_lgpl_1_9_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_0_1_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_15_0_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_1_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__qunar_common_common_api_8_2_13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__qunar_common_common_concurrent_7_0_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__qunar_common_common_core_7_0_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__qunar_common_common_http_7_0_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__qunar_common_common_rpc_7_0_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__qunar_tc_order_ordercenter_api_2_4_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__qunar_tc_order_ordercenter_consumer_api_2_4_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scrapy/data/positionData/perl/positionData_all_perl.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scrapy/data/positionData/ruby/positionData_all_ruby.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scrapy/data/positionData/shell/positionData_all_shell.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scrapy/data/positionData/vb/positionData_all_vb.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scrapy/data/positionData/webqianduan/positionData_all_webqianduan.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scrapy/data/positionData/webqianduan/positionData_nanchang_webqianduan.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/march/graduation/utils/URLBuilder.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_3_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/base/dao/BaseDao.class" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/base/dao/BaseDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/march/graduation/base/dao/BaseDao.class" afterPath="$PROJECT_DIR$/target/classes/com/march/graduation/base/dao/BaseDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/constant/CacheKeyConstant.class" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/constant/CacheKeyConstant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/march/graduation/constant/CacheKeyConstant.class" afterPath="$PROJECT_DIR$/target/classes/com/march/graduation/constant/CacheKeyConstant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis.war" afterPath="$PROJECT_DIR$/target/DataAnalysis.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/utils/EmptyFileChecker.class" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/utils/EmptyFileChecker.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/march/graduation/utils/EmptyFileChecker.class" afterPath="$PROJECT_DIR$/target/classes/com/march/graduation/utils/EmptyFileChecker.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/execute/FutureBlockException.class" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/execute/FutureBlockException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/march/graduation/execute/FutureBlockException.class" afterPath="$PROJECT_DIR$/target/classes/com/march/graduation/execute/FutureBlockException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/dao/position/IPositionDao.class" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/dao/position/IPositionDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/march/graduation/dao/position/IPositionDao.class" afterPath="$PROJECT_DIR$/target/classes/com/march/graduation/dao/position/IPositionDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/service/position/IPositionService.class" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/service/position/IPositionService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/march/graduation/service/position/IPositionService.class" afterPath="$PROJECT_DIR$/target/classes/com/march/graduation/service/position/IPositionService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/controller/IndexController$1.class" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/controller/IndexController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/march/graduation/controller/IndexController$1.class" afterPath="$PROJECT_DIR$/target/classes/com/march/graduation/controller/IndexController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/controller/IndexController$2.class" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/controller/IndexController$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/march/graduation/controller/IndexController$2.class" afterPath="$PROJECT_DIR$/target/classes/com/march/graduation/controller/IndexController$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/controller/IndexController$3.class" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/controller/IndexController$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/march/graduation/controller/IndexController$3.class" afterPath="$PROJECT_DIR$/target/classes/com/march/graduation/controller/IndexController$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/controller/IndexController$4.class" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/controller/IndexController$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/march/graduation/controller/IndexController$4.class" afterPath="$PROJECT_DIR$/target/classes/com/march/graduation/controller/IndexController$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/controller/IndexController$5.class" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/controller/IndexController$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/march/graduation/controller/IndexController$5.class" afterPath="$PROJECT_DIR$/target/classes/com/march/graduation/controller/IndexController$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/controller/IndexController$6.class" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/controller/IndexController$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/march/graduation/controller/IndexController$6.class" afterPath="$PROJECT_DIR$/target/classes/com/march/graduation/controller/IndexController$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/controller/IndexController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/march/graduation/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/classes/com/march/graduation/controller/IndexController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/web/interceptor/LoginInterceptor.class" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/web/interceptor/LoginInterceptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/march/graduation/web/interceptor/LoginInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/com/march/graduation/web/interceptor/LoginInterceptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/dao/position/impl/PositionDaoImpl.class" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/dao/position/impl/PositionDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/march/graduation/dao/position/impl/PositionDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/march/graduation/dao/position/impl/PositionDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/service/position/impl/PositionServiceImpl$1.class" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/service/position/impl/PositionServiceImpl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/march/graduation/service/position/impl/PositionServiceImpl$1.class" afterPath="$PROJECT_DIR$/target/classes/com/march/graduation/service/position/impl/PositionServiceImpl$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/service/position/impl/PositionServiceImpl.class" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/service/position/impl/PositionServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/march/graduation/service/position/impl/PositionServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/march/graduation/service/position/impl/PositionServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/model/craw/RecruitmentInfo.class" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/model/craw/RecruitmentInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/march/graduation/model/craw/RecruitmentInfo.class" afterPath="$PROJECT_DIR$/target/classes/com/march/graduation/model/craw/RecruitmentInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/system/SystemPropertiesTool.class" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/system/SystemPropertiesTool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/march/graduation/system/SystemPropertiesTool.class" afterPath="$PROJECT_DIR$/target/classes/com/march/graduation/system/SystemPropertiesTool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/controller/UserController.class" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/com/march/graduation/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/march/graduation/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/march/graduation/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/img/anchor.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/img/anchor.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/navigate/arrow-down.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/navigate/arrow-down.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/navigate/arrow-left.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/navigate/arrow-left.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/navigate/arrow-right.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/navigate/arrow-right.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/navigate/arrow-up.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/navigate/arrow-up.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/background.png" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/background.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/images/bg-input-focus.png" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/images/bg-input-focus.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/images/bg-input.png" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/images/bg-input.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/chosen-sprite.png" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/chosen-sprite.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/chosen-sprite@2x.png" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/chosen-sprite@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/img/glyphicons-halflings-white.png" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/img/glyphicons-halflings-white.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/img/glyphicons-halflings-white.png" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/img/glyphicons-halflings-white.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/img/glyphicons-halflings.png" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/img/glyphicons-halflings.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/img/glyphicons-halflings.png" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/img/glyphicons-halflings.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/image/hs-2004-27-a-large-web.jpg" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/image/hs-2004-27-a-large-web.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/fonts/icomoon-small.eot" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/fonts/icomoon-small.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/fonts/icomoon-small.woff" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/fonts/icomoon-small.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/fonts/icomoon.eot" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/fonts/icomoon.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/fonts/icomoon.woff" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/fonts/icomoon.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/examples/iphone.png" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/examples/iphone.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/img/loader.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/img/loader.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/media/moxieplayer.swf" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/media/moxieplayer.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/img/object.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/img/object.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-cool.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-cool.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-cry.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-cry.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-embarassed.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-embarassed.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-foot-in-mouth.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-foot-in-mouth.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-frown.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-frown.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-innocent.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-innocent.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-kiss.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-kiss.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-laughing.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-laughing.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-money-mouth.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-money-mouth.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-sealed.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-sealed.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-smile.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-smile.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-surprised.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-surprised.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-undecided.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-undecided.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-wink.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-wink.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-yell.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/img/smiley-yell.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/examples/smoke.png" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/examples/smoke.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/images/sprite.png" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/images/sprite.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/img/trans.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/img/trans.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/img/wline.gif" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/img/wline.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/-complex_header.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/-complex_header.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/-iDraw.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/-iDraw.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/-iDraw.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/-iDraw.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/.gitignore" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/.settings/.gitignore" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/.settings/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/.gitignore" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/.gitignore" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/2512.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/2512.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/2530-2.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/2530-2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/2530.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/2530.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/2569.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/2569.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/2569.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/2569.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/2600.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/2600.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/2600.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/2600.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/2635.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/2635.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/2746-stable-sort.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/2746-stable-sort.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/2799.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/2799.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/2840-restore-table-width.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/2840-restore-table-width.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/2914-state-save-sort.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/2914-state-save-sort.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/5396-fnUpdate-arrays-mData.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/5396-fnUpdate-arrays-mData.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/5396-fnUpdate-arrays.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/5396-fnUpdate-arrays.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/5508-xscroll-zero-content.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/5508-xscroll-zero-content.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/6776-scrolling-table-grows.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/6776-scrolling-table-grows.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/API.md" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/API.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/march/graduation/base/dao/BaseDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/base/dao/BaseDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/CONTRIBUTING.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/march/graduation/constant/CacheKeyConstant.java" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/constant/CacheKeyConstant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DataAnalysis.iml" afterPath="$PROJECT_DIR$/DataAnalysis.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/DataAnalysis_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/DataAnalysis_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/march/graduation/utils/DateUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/utils/DateUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/march/graduation/utils/EmptyFileChecker.java" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/utils/EmptyFileChecker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/FAQ.md" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/FAQ.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/march/graduation/web/template/freemarker/FreemarkerStaticModels.java" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/web/template/freemarker/FreemarkerStaticModels.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/march/graduation/execute/FutureBlockException.java" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/execute/FutureBlockException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/Gemfile.lock" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/Gemfile" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/march/graduation/dao/position/IPositionDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/dao/position/IPositionDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/march/graduation/service/position/IPositionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/service/position/IPositionService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/march/graduation/controller/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/controller/IndexController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/LICENCE" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/LICENCE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/LICENSE.TXT" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/LICENSE.TXT" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/LICENSE.txt" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/LICENSE.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/LICENSE" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/march/graduation/web/interceptor/LoginInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/web/interceptor/LoginInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/Makefile" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/NEWS.md" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/NEWS.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/PLUGINS.md" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/PLUGINS.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/march/graduation/dao/position/impl/PositionDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/dao/position/impl/PositionDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/march/graduation/service/position/impl/PositionServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/service/position/impl/PositionServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/README.md" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/README.md" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/README" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/Rakefile" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/Rakefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/march/graduation/model/craw/RecruitmentInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/model/craw/RecruitmentInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/march/graduation/web/model/ResultCode.java" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/web/model/ResultCode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/march/graduation/utils/StringUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/utils/StringUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/march/graduation/system/SystemPropertiesTool.java" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/system/SystemPropertiesTool.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/march/graduation/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/march/graduation/web/model/UserInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/web/model/UserInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/VERSION" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/VERSION" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/_getDataFunctions.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/_getDataFunctions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests/1_dom/_zero_config.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests/1_dom/_zero_config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/_zero_config.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/_zero_config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aaSorting.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aaSorting.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aaSortingFixed.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aaSortingFixed.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/africa" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/africa" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/antarctica" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/antarctica" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.bSearchable.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.bSearchable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/aoColumns.bSearchable.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/aoColumns.bSearchable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/aoColumns.bSearchable.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/aoColumns.bSearchable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/aoColumns.bSearchable.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/aoColumns.bSearchable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/5_ajax_objects/aoColumns.bSearchable.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/5_ajax_objects/aoColumns.bSearchable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/6_delayed_rendering/aoColumns.bSearchable.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/6_delayed_rendering/aoColumns.bSearchable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.bSortable.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.bSortable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/aoColumns.bSortable.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/aoColumns.bSortable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/aoColumns.bSortable.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/aoColumns.bSortable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/aoColumns.bSortable.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/aoColumns.bSortable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/5_ajax_objects/aoColumns.bSortable.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/5_ajax_objects/aoColumns.bSortable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/6_delayed_rendering/aoColumns.bSortable.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/6_delayed_rendering/aoColumns.bSortable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.bUseRendered.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.bUseRendered.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/aoColumns.bUseRendered.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/aoColumns.bUseRendered.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/aoColumns.bUseRendered.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/aoColumns.bUseRendered.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/aoColumns.bUseRendered.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/aoColumns.bUseRendered.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/5_ajax_objects/aoColumns.bUseRendered.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/5_ajax_objects/aoColumns.bUseRendered.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/6_delayed_rendering/aoColumns.bUseRendered.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/6_delayed_rendering/aoColumns.bUseRendered.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.bVisible.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.bVisible.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/aoColumns.bVisible.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/aoColumns.bVisible.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/aoColumns.bVisible.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/aoColumns.bVisible.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/aoColumns.bVisible.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/aoColumns.bVisible.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/5_ajax_objects/aoColumns.bVisible.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/5_ajax_objects/aoColumns.bVisible.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/6_delayed_rendering/aoColumns.bVisible.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/6_delayed_rendering/aoColumns.bVisible.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.bVisible2.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.bVisible2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.fnRender.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.fnRender.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/aoColumns.fnRender.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/aoColumns.fnRender.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/aoColumns.fnRender.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/aoColumns.fnRender.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/aoColumns.fnRender.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/aoColumns.fnRender.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/5_ajax_objects/aoColumns.fnRender.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/5_ajax_objects/aoColumns.fnRender.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/6_delayed_rendering/aoColumns.fnRender.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/6_delayed_rendering/aoColumns.fnRender.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.iDataSort.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.iDataSort.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/aoColumns.iDataSort.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/aoColumns.iDataSort.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/aoColumns.iDataSort.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/aoColumns.iDataSort.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/5_ajax_objects/aoColumns.iDataSort.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/5_ajax_objects/aoColumns.iDataSort.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/6_delayed_rendering/aoColumns.iDataSort.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/6_delayed_rendering/aoColumns.iDataSort.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.sClass.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.sClass.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/aoColumns.sClass.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/aoColumns.sClass.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/aoColumns.sClass.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/aoColumns.sClass.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/aoColumns.sClass.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/aoColumns.sClass.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/5_ajax_objects/aoColumns.sClass.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/5_ajax_objects/aoColumns.sClass.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/6_delayed_rendering/aoColumns.sClass.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/6_delayed_rendering/aoColumns.sClass.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.sName.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.sName.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/aoColumns.sName.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/aoColumns.sName.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/aoColumns.sName.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/aoColumns.sName.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/aoColumns.sName.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/aoColumns.sName.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/5_ajax_objects/aoColumns.sName.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/5_ajax_objects/aoColumns.sName.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/6_delayed_rendering/aoColumns.sName.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/6_delayed_rendering/aoColumns.sName.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.sTitle.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.sTitle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/aoColumns.sTitle.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/aoColumns.sTitle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/aoColumns.sTitle.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/aoColumns.sTitle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/aoColumns.sTitle.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/aoColumns.sTitle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/5_ajax_objects/aoColumns.sTitle.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/5_ajax_objects/aoColumns.sTitle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/6_delayed_rendering/aoColumns.sTitle.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/6_delayed_rendering/aoColumns.sTitle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.sWidth.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoColumns.sWidth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/aoColumns.sWidth.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/aoColumns.sWidth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/aoColumns.sWidth.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/aoColumns.sWidth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/aoColumns.sWidth.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/aoColumns.sWidth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/5_ajax_objects/aoColumns.sWidth.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/5_ajax_objects/aoColumns.sWidth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/6_delayed_rendering/aoColumns.sWidth.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/6_delayed_rendering/aoColumns.sWidth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoSearchCols.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/aoSearchCols.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring/applicationContext-db.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring/applicationContext-db.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/spring/applicationContext-db.xml" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/spring/applicationContext-db.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/applicationContext-db.xml" afterPath="$PROJECT_DIR$/target/classes/spring/applicationContext-db.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/spring/applicationContext.xml" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/spring/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/spring/applicationContext.xml" afterPath="$PROJECT_DIR$/target/classes/spring/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/asStripClasses.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/asStripClasses.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/asia" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/asia" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/australasia" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/australasia" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bAutoWidth.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bAutoWidth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bFilter.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bFilter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bInfiniteScroll.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bInfiniteScroll.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/bInfiniteScroll.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/bInfiniteScroll.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bInfo.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bJQueryUI.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bJQueryUI.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bLengthChange.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bLengthChange.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bPaginate.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bPaginate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bProcessing.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bProcessing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bServerSide.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bServerSide.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bSort.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bSort.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bSortCellsTop.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bSortCellsTop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bSortClasses.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/bSortClasses.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/backward" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/backward" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/js/bootstrap-button.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/js/bootstrap-button.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/js/bootstrap-button.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/js/bootstrap-button.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/css/bootstrap-responsive.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/css/bootstrap-responsive.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/css/bootstrap-responsive.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/css/bootstrap-responsive.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/css/bootstrap-responsive.min.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/css/bootstrap-responsive.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/css/bootstrap-responsive.min.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/css/bootstrap-responsive.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/dist/bootstrap-wysihtml5-0.0.2.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/dist/bootstrap-wysihtml5-0.0.2.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/dist/bootstrap-wysihtml5-0.0.2.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/dist/bootstrap-wysihtml5-0.0.2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/dist/bootstrap-wysihtml5-0.0.2.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/dist/bootstrap-wysihtml5-0.0.2.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.ar-AR.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.ar-AR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.bg-BG.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.bg-BG.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.ca-CT.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.ca-CT.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.cs-CZ.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.cs-CZ.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.da-DK.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.da-DK.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.de-DE.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.de-DE.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.el-GR.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.el-GR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.es-AR.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.es-AR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.es-ES.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.es-ES.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.fr-FR.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.fr-FR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.hr-HR.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.hr-HR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.it-IT.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.it-IT.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.ja-JP.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.ja-JP.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.ko-KR.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.ko-KR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.lt-LT.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.lt-LT.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.mo-MD.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.mo-MD.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.nb-NB.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.nb-NB.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.nl-NL.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.nl-NL.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.pl-PL.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.pl-PL.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.pt-BR.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.pt-BR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.ru-RU.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.ru-RU.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.sk-SK.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.sk-SK.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.sv-SE.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.sv-SE.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.tr-TR.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.tr-TR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.ua-UA.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.ua-UA.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.zh-CN.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.zh-CN.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.zh-TW.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/src/locales/bootstrap-wysihtml5.zh-TW.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/css/bootstrap.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/css/bootstrap.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/js/bootstrap.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/js/bootstrap.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/browser_test.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/browser_test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/changelog.txt" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/changelog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/chosen.jquery.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/chosen.jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/chosen.min.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/chosen.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/component.json" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/component.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/component.json" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/component.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/content.inline.min.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/content.inline.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/content.min.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/content.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/ajax/data-eu-gdp-growth-1.json" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/ajax/data-eu-gdp-growth-1.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/ajax/data-eu-gdp-growth-2.json" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/ajax/data-eu-gdp-growth-2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/ajax/data-eu-gdp-growth-3.json" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/ajax/data-eu-gdp-growth-3.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/ajax/data-eu-gdp-growth-4.json" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/ajax/data-eu-gdp-growth-4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/ajax/data-eu-gdp-growth-5.json" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/ajax/data-eu-gdp-growth-5.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/ajax/data-eu-gdp-growth.json" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/ajax/data-eu-gdp-growth.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/ajax/data-japan-gdp-growth.json" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/ajax/data-japan-gdp-growth.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/ajax/data-usa-gdp-growth.json" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/ajax/data-usa-gdp-growth.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dataAnalysis-controller.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dataAnalysis-controller.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/dataAnalysis-controller.xml" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/dataAnalysis-controller.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dataAnalysis-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dataAnalysis-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/date.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/date.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/default.properties" afterPath="$PROJECT_DIR$/src/main/resources/default.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/default.properties" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/classes/default.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/default.properties" afterPath="$PROJECT_DIR$/target/classes/default.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/compat3x/editable_selects.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/compat3x/editable_selects.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/editor_test.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/editor_test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/etcetera" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/etcetera" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/europe" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/europe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/examples.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/examples.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/excanvas.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/excanvas.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/excanvas.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/excanvas.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/factory" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/factory" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/flot.jquery.json" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/flot.jquery.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnCookieCallback.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnCookieCallback.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnCreatedCell.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnCreatedCell.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/fnCreatedCell.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/fnCreatedCell.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/fnCreatedCell.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/fnCreatedCell.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/fnCreatedCell.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/fnCreatedCell.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnCreatedRow.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnCreatedRow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/fnCreatedRow.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/2_js/fnCreatedRow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/fnCreatedRow.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/3_ajax/fnCreatedRow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/fnCreatedRow.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/4_server-side/fnCreatedRow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnDeleteRow.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnDeleteRow.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnDrawCallback.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnDrawCallback.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnFilter.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnFilter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnFooterCallback.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnFooterCallback.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnHeaderCallback.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnHeaderCallback.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnInfoCallback.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnInfoCallback.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnInitComplete.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnInitComplete.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnRowCallback.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnRowCallback.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnSetColumnVis.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnSetColumnVis.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnSetColumnVis2.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/fnSetColumnVis2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/compat3x/form_utils.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/compat3x/form_utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/html-autodetect-sort.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/html-autodetect-sort.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/support/html_equal.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/support/html_equal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/iDisplayLength.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/iDisplayLength.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/fonts/icomoon-small.svg" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/fonts/icomoon-small.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/fonts/icomoon-small.ttf" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/fonts/icomoon-small.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/fonts/icomoon.svg" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/fonts/icomoon.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/fonts/icomoon.ttf" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/fonts/icomoon.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/incompatible_test.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/incompatible_test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/ajax/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/ajax/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/annotating/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/annotating/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-interacting/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-interacting/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-multiple/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-multiple/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/basic-options/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/basic-options/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/basic-usage/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/basic-usage/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/categories/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/categories/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/image/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/image/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/interacting/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/interacting/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/navigate/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/navigate/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/percentiles/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/percentiles/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/realtime/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/realtime/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/resize/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/resize/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/selection/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/selection/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/series-errorbars/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/series-errorbars/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/series-pie/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/series-pie/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/series-toggle/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/series-toggle/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/series-types/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/series-types/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/stacking/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/stacking/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/symbols/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/symbols/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/threshold/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/threshold/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/tracking/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/tracking/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/visitors/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/visitors/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/zooming/index.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/zooming/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/templates/index.jsp" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/templates/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/iso3166.tab" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/iso3166.tab" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/examples/jgrowl-pool.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/examples/jgrowl-pool.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/examples/jgrowl.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/examples/jgrowl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/jgrowl.jquery.json" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/jgrowl.jquery.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/js/jquery-1.7.2.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/js/jquery-1.7.2.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/js/jquery-1.7.2.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/js/jquery-1.7.2.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/shared/jquery-ui/jquery-ui.min.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/shared/jquery-ui/jquery-ui.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/wizard/jquery.bootstrap.wizard.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/wizard/jquery.bootstrap.wizard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/wizard/jquery.bootstrap.wizard.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/wizard/jquery.bootstrap.wizard.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.colorhelpers.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.colorhelpers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/easypiechart/jquery.easy-pie-chart.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/easypiechart/jquery.easy-pie-chart.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/easypiechart/jquery.easy-pie-chart.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/easypiechart/jquery.easy-pie-chart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.categories.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.categories.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.crosshair.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.crosshair.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.errorbars.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.errorbars.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.fillbetween.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.fillbetween.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.image.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.image.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/styles/vendors/flot/jquery.flot.js" afterPath="$PROJECT_DIR$/src/main/webapp/styles/vendors/flot/jquery.flot.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.navigate.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.navigate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.pie.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.pie.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.resize.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.resize.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.selection.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.selection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.stack.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.stack.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.symbol.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.symbol.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.threshold.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.threshold.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.time.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.flot.time.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/jquery.jgrowl.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/jquery.jgrowl.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/jquery.jgrowl.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/jquery.jgrowl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/jquery.tinymce.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/jquery.tinymce.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jquery.uniform.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jquery.uniform.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy/lagou.py" afterPath="$PROJECT_DIR$/scrapy/lagou.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/leapseconds" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/leapseconds" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/license.txt" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/license.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/compat3x/mctabs.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/compat3x/mctabs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/morris/morris.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/morris/morris.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/morris/morris.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/morris/morris.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/morris/morris.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/morris/morris.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/examples/multiple-containers.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/examples/multiple-containers.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/northamerica" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/northamerica" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/oLanguage.oPaginate.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/oLanguage.oPaginate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/oLanguage.sInfo.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/oLanguage.sInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/oLanguage.sInfoEmpty.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/oLanguage.sInfoEmpty.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/oLanguage.sInfoPostFix.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/oLanguage.sInfoPostFix.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/oLanguage.sLengthMenu.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/oLanguage.sLengthMenu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/oLanguage.sProcessing.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/oLanguage.sProcessing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/oLanguage.sSearch.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/oLanguage.sSearch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/oLanguage.sUrl.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/oLanguage.sUrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/oLanguage.sZeroRecords.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/oLanguage.sZeroRecords.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/oSearch.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/oSearch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/pacificnew" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/pacificnew" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/bootstrap_wysihtml5/parserRules_test.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/bootstrap_wysihtml5/parserRules_test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/advlist/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/advlist/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/anchor/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/anchor/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/autolink/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/autolink/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/autoresize/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/autoresize/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/autosave/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/autosave/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/bbcode/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/bbcode/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/charmap/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/charmap/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/code/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/code/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/contextmenu/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/contextmenu/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/directionality/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/directionality/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/emoticons/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/example/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/example/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/example_dependency/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/example_dependency/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/fullpage/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/fullpage/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/fullscreen/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/fullscreen/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/hr/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/hr/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/image/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/image/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/importcss/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/importcss/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/insertdatetime/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/insertdatetime/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/layer/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/layer/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/legacyoutput/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/legacyoutput/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/link/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/link/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/lists/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/lists/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/media/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/media/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/nonbreaking/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/nonbreaking/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/noneditable/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/noneditable/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/pagebreak/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/pagebreak/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/paste/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/paste/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/preview/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/preview/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/print/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/print/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/save/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/save/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/searchreplace/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/searchreplace/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/spellchecker/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/spellchecker/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/tabfocus/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/tabfocus/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/table/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/table/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/template/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/template/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/textcolor/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/textcolor/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/visualblocks/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/visualblocks/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/visualchars/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/visualchars/plugin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/wordcount/plugin.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/wordcount/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/march/graduation/view/JsonAndViewMethodReturnValueHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/march/graduation/view/JsonAndViewMethodReturnValueHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrapy/data/positionData/java/positionData_lanzhou_java.json" afterPath="$PROJECT_DIR$/scrapy/data/positionData/java/positionData_lanzhou_java.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/css/prettify.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/css/prettify.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/css/prettify.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/css/prettify.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/js/prettify.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/js/prettify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/js/prettify.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/js/prettify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/langs/readme.md" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/langs/readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/fonts/readme.md" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/fonts/readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/readme.textile" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/readme.textile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/sAjaxSource.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/sAjaxSource.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/sDom.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/sDom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/sPaginationType.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/sPaginationType.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/sScrollXY.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/sScrollXY.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/examples/sideways.html" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/jGrowl/examples/sideways.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/skin.ie7.min.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/skin.ie7.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/skin.min.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/skins/lightgray/skin.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/solar87" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/solar87" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/solar88" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/solar88" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/solar89" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/solar89" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/southamerica" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/southamerica" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/analysis/stats.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/analysis/stats.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/templates/analysis/stats.jsp" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/templates/analysis/stats.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/systemv" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/systemv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/th_in_body.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/datatables/unit_testing/tests_onhold/1_dom/th_in_body.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/themes/modern/theme.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/themes/modern/theme.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/compat3x/tiny_mce_popup.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/compat3x/tiny_mce_popup.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/tinymce.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/tinymce.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/undo_manager_test.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/undo_manager_test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/compat3x/validate.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/compat3x/validate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/visualblocks/css/visualblocks.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/tinymce/js/tinymce/plugins/visualblocks/css/visualblocks.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/DataAnalysis/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/js/wysihtml5-0.3.0.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/js/wysihtml5-0.3.0.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/js/wysihtml5-0.3.0.min.js" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/js/wysihtml5-0.3.0.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/css/wysiwyg-color.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/lib/css/wysiwyg-color.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/css/wysiwyg-color.css" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/bootstrap-wysihtml5/test/lib/css/wysiwyg-color.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/yearistype.sh" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/yearistype.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/zone.tab" afterPath="$PROJECT_DIR$/target/DataAnalysis/styles/vendors/flot/examples/axes-time-zones/tz/zone.tab" />
     </list>
     <ignored path="DataAnalysis.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -597,34 +49,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="stats.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/analysis/stats.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="25.034483">
-              <caret line="441" column="25" selection-start-line="441" selection-start-column="25" selection-end-line="441" selection-end-column="25" />
-              <folding>
-                <marker date="1453982866545" expanded="true" signature="54690:54749" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DateUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/march/graduation/utils/DateUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#2801#2802#0" expanded="false" />
-                <element signature="e#2866#2867#0" expanded="false" />
-                <element signature="e#2930#2931#0" expanded="false" />
-                <element signature="e#2995#2996#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="StringUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/march/graduation/utils/StringUtils.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -663,7 +87,17 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dataAnalysis-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+              <caret line="65" column="63" selection-start-line="65" selection-start-column="63" selection-end-line="65" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResultCode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/march/graduation/model/ResultCode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -685,30 +119,46 @@
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="97" column="20" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="20" />
+              <caret line="103" column="41" selection-start-line="103" selection-start-column="41" selection-end-line="103" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseDao.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/march/graduation/base/dao/BaseDao.java">
+      <file leaf-file-name="JsonAndViewMethodReturnValueHandler.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/march/graduation/view/JsonAndViewMethodReturnValueHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3207548">
-              <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-              <folding />
+            <state vertical-scroll-proportion="0.5660377">
+              <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+              <folding>
+                <element signature="e#1423#1445#0" expanded="true" />
+                <element signature="e#4416#4417#0" expanded="true" />
+                <element signature="e#4456#4457#0" expanded="true" />
+                <element signature="e#6548#6549#0" expanded="true" />
+                <element signature="e#6588#6589#0" expanded="true" />
+                <element signature="e#6623#6624#0" expanded="true" />
+                <element signature="e#6663#6664#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.flot.symbol.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/styles/vendors/flot/jquery.flot.symbol.js">
+      <file leaf-file-name="dataAnalysis-controller.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dataAnalysis-controller.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+              <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/march/graduation/base/dao/BaseDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -743,7 +193,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scrapy/data/city.txt" />
         <option value="$PROJECT_DIR$/scrapy/data/positionData/webqianduan/positionData_all_webqianduan.json" />
         <option value="$PROJECT_DIR$/src/main/java/com/march/graduation/base/dao/BaseDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/march/graduation/service/position/IPositionService.java" />
@@ -794,6 +243,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dataAnalysis-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/march/graduation/web/interceptor/LoginInterceptor.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/march/graduation/view/JsonAndViewMethodReturnValueHandler.java" />
       </list>
     </option>
   </component>
@@ -927,6 +377,142 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="DataAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graduation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1625,16 +1211,16 @@
       <workItem from="1453857717416" duration="32028000" />
       <workItem from="1453943981406" duration="32926000" />
       <workItem from="1454030456982" duration="3673000" />
-      <workItem from="1454037990686" duration="1066000" />
+      <workItem from="1454037990686" duration="1378000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275349000" />
+    <option name="totallyTimeSpent" value="275661000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1368" height="742" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1654,10 +1240,10 @@
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35106382" sideWeight="0.5078125" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288201" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979912" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24166666" sideWeight="0.4921875" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12071778" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24166666" sideWeight="0.4921875" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7846656" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="1465" y="100" width="882" height="1721" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6015625" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1667,6 +1253,38 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="1465" y="100" width="882" height="1721" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5860735" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979912" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979912" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979912" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24166666" sideWeight="0.4921875" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7846656" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6015625" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32979912" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43861607" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30174083" sideWeight="0.5078125" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3247768" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35106382" sideWeight="0.5078125" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287879" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1725,21 +1343,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scrapy/data/positionData/cto/positionData_hefei_cto.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.012694749">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/march/graduation/controller/MonitorCometController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="62" selection-start-line="37" selection-start-column="62" selection-end-line="37" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/march/graduation/execute/FutureHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1840,13 +1443,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07491487">
           <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dataAnalysis-controller.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2996595">
-          <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -2086,7 +1682,7 @@
         <state vertical-scroll-proportion="25.034483">
           <caret line="441" column="25" selection-start-line="441" selection-start-column="25" selection-end-line="441" selection-end-column="25" />
           <folding>
-            <marker date="1453982866545" expanded="true" signature="54690:54749" placeholder="..." />
+            <marker date="1453982866545" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -2133,14 +1729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dataAnalysis-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/march/graduation/web/interceptor/LoginInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2151,19 +1739,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/march/graduation/base/dao/BaseDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="97" column="20" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="20" />
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/march/graduation/base/dao/BaseDao.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3207548">
-          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="103" column="41" selection-start-line="103" selection-start-column="41" selection-end-line="103" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dataAnalysis-controller.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dataAnalysis-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="63" selection-start-line="65" selection-start-column="63" selection-end-line="65" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/march/graduation/model/ResultCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/march/graduation/view/JsonAndViewMethodReturnValueHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5660377">
+          <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+          <folding>
+            <element signature="e#1423#1445#0" expanded="true" />
+            <element signature="e#4416#4417#0" expanded="true" />
+            <element signature="e#4456#4457#0" expanded="true" />
+            <element signature="e#6548#6549#0" expanded="true" />
+            <element signature="e#6588#6589#0" expanded="true" />
+            <element signature="e#6623#6624#0" expanded="true" />
+            <element signature="e#6663#6664#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

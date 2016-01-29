@@ -29,7 +29,7 @@ public class JsonAndViewMethodReturnValueHandler implements HandlerMethodReturnV
     private static final Logger logger = LoggerFactory.getLogger(JsonAndViewMethodReturnValueHandler.class);
 
     private static final String DEFAULT_VIEW_NAME = "jsonView";
-    
+
     public static final String JAV_MODEL_KEY = JsonAndView.class.getName() + "-instance";
 
     private List<String> customResultCodeList;
@@ -38,16 +38,22 @@ public class JsonAndViewMethodReturnValueHandler implements HandlerMethodReturnV
 
     private String viewName = DEFAULT_VIEW_NAME;
 
-    /* (non-Javadoc)
-     * @see org.springframework.web.method.support.HandlerMethodReturnValueHandler#supportsReturnType(org.springframework.core.MethodParameter)
+    /*
+     * (non-Javadoc)
+     * @see
+     * org.springframework.web.method.support.HandlerMethodReturnValueHandler#supportsReturnType(org.springframework.
+     * core.MethodParameter)
      */
     @Override
     public boolean supportsReturnType(MethodParameter returnType) {
         return JsonAndView.class.isAssignableFrom(returnType.getParameterType());
     }
 
-    /* (non-Javadoc)
-     * @see org.springframework.web.method.support.HandlerMethodReturnValueHandler#handleReturnValue(java.lang.Object, org.springframework.core.MethodParameter, org.springframework.web.method.support.ModelAndViewContainer, org.springframework.web.context.request.NativeWebRequest)
+    /*
+     * (non-Javadoc)
+     * @see org.springframework.web.method.support.HandlerMethodReturnValueHandler#handleReturnValue(java.lang.Object,
+     * org.springframework.core.MethodParameter, org.springframework.web.method.support.ModelAndViewContainer,
+     * org.springframework.web.context.request.NativeWebRequest)
      */
     @Override
     public void handleReturnValue(Object returnValue, MethodParameter returnType, ModelAndViewContainer mavContainer,
@@ -60,29 +66,22 @@ public class JsonAndViewMethodReturnValueHandler implements HandlerMethodReturnV
 
         if (!(returnValue instanceof JsonAndView)) {
             // should not happen
-            throw new UnsupportedOperationException("Unexpected return type: "
-                    + returnType.getParameterType().getName() + " in method: " + returnType.getMethod());
+            throw new UnsupportedOperationException("Unexpected return type: " + returnType.getParameterType().getName()
+                    + " in method: " + returnType.getMethod());
         }
         JsonAndView jav = (JsonAndView) returnValue;
-        
-        if(jav.getErrcode() != ResultCode.OK){
+
+        if (jav.getErrcode() != ResultCode.OK) {
             jav.setRet(false);
         }
         mavContainer.getModel().clear();
         mavContainer.addAttribute(JAV_MODEL_KEY, jav);
 
-        switch (jav.getErrcode()) {
-            case ResultCode.STD_OK:
-            case ResultCode.STD_CREATED:
-            case ResultCode.STD_FORBIDDEN:
-            case ResultCode.STD_NOT_FOUND:
-            case ResultCode.STD_UNAUTH:
-            case ResultCode.STD_UNSUPPORTED_MEDIA_TYPE:
-                HttpServletResponse response = webRequest.getNativeResponse(HttpServletResponse.class);
-                if (response != null) {
-                    response.setStatus(jav.getErrcode());
-                }
+        HttpServletResponse response = webRequest.getNativeResponse(HttpServletResponse.class);
+        if (response != null) {
+            response.setStatus(jav.getErrcode());
         }
+
         if (StringUtils.isNotBlank(jav.getErrmsg())) {
             return;
         }
@@ -115,7 +114,8 @@ public class JsonAndViewMethodReturnValueHandler implements HandlerMethodReturnV
         this.viewName = viewName;
     }
 
-    /* (non-Javadoc)
+    /*
+     * (non-Javadoc)
      * @see org.springframework.beans.factory.InitializingBean#afterPropertiesSet()
      */
     @Override

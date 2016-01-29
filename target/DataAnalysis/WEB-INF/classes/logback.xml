@@ -9,10 +9,6 @@
 			<level>INFO</level>
 		</filter>
 	</appender>
-
-	<logger name="com.qunar.travel.touch" level="debug" additivity="false">
-		<appender-ref ref="console" />
-	</logger>
 	
 	<logger name="org.springframework" level="info" additivity="false">
 		<appender-ref ref="console" />
