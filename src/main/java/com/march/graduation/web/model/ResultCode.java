@@ -20,4 +20,15 @@ public class ResultCode {
 
     public static final int UNKNOWN_ERROR = 8;
 
+    public static final int STD_OK = 200;
+
+    public static final int STD_CREATED = 201;
+
+    public static final int STD_UNAUTH = 401;
+
+    public static final int STD_FORBIDDEN = 403;
+
+    public static final int STD_NOT_FOUND = 404;
+
+    public static final int STD_UNSUPPORTED_MEDIA_TYPE = 415;
 }

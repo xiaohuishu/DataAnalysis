@@ -77,9 +77,17 @@ public class JsonAndViewMethodReturnValueHandler implements HandlerMethodReturnV
         mavContainer.getModel().clear();
         mavContainer.addAttribute(JAV_MODEL_KEY, jav);
 
-        HttpServletResponse response = webRequest.getNativeResponse(HttpServletResponse.class);
-        if (response != null) {
-            response.setStatus(jav.getErrcode());
+        switch (jav.getErrcode()) {
+            case ResultCode.STD_OK:
+            case ResultCode.STD_CREATED:
+            case ResultCode.STD_FORBIDDEN:
+            case ResultCode.STD_NOT_FOUND:
+            case ResultCode.STD_UNAUTH:
+            case ResultCode.STD_UNSUPPORTED_MEDIA_TYPE:
+                HttpServletResponse response = webRequest.getNativeResponse(HttpServletResponse.class);
+                if (response != null) {
+                    response.setStatus(jav.getErrcode());
+                }
         }
 
         if (StringUtils.isNotBlank(jav.getErrmsg())) {
