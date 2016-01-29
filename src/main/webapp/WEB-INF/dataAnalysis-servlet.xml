@@ -15,25 +15,6 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <!--    <bean id="freeMarkerViewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
-            <property name="order" value="1"/>
-            <property name="viewClass" value="org.springframework.web.servlet.view.freemarker.FreeMarkerView"/>
-            <property name="contentType" value="text/html;charset=UTF-8"/>
-            <property name="cache" value="false"/>
-            <property name="viewNames" value="*.ftl"/>
-            <property name="attributesMap" ref="freemarkerStaticModels"/>
-        </bean>
-
-        <bean id="freemarkerStaticModels" class="com.march.graduation.web.template.freemarker.FreemarkerStaticModels"
-              factory-method="getInstance">
-            <property name="staticModels">
-                <map>
-                    <entry key="StringUtils" value="com.qunar.travel.book.utils.StringUtils"/>
-                    <entry key="URLBuilder" value="com.qunar.travel.commons.web.url.URLBuilder"/>
-                </map>
-            </property>
-        </bean>-->
-
     <bean id="jsonView" class="com.march.graduation.view.JsonpView">
         <property name="encoding">
             <value type="com.fasterxml.jackson.core.JsonEncoding">UTF8</value>

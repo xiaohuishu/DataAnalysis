@@ -1,5 +1,7 @@
 package com.march.graduation.dao.position;
 
+import com.march.graduation.model.Condition;
+import com.march.graduation.model.Limit;
 import com.march.graduation.model.craw.RecruitmentInfo;
 
 import java.util.List;
@@ -14,4 +16,9 @@ public interface IPositionDao {
 
     long insertPositionData(RecruitmentInfo recruitmentInfo);
 
+    List<RecruitmentInfo> queryByCondition(Condition condition, Limit limit);
+
+    int queryCountByCondition(Condition condition);
+
+    int queryBySql(String sql, Object... args);
 }

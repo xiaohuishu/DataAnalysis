@@ -36,6 +36,50 @@ public class EmptyFileChecker {
 
 		return flag;
 	}
+
+	//删除指定文件夹下所有文件
+	//param path 文件夹完整绝对路径
+	public static boolean delAllFile(String path) {
+		boolean flag = false;
+		File file = new File(path);
+		if (!file.exists()) {
+			return false;
+		}
+		if (!file.isDirectory()) {
+			return false;
+		}
+		String[] tempList = file.list();
+		File temp;
+		for (String aTempList : tempList) {
+			if (path.endsWith(File.separator)) {
+				temp = new File(path + aTempList);
+			} else {
+				temp = new File(path + File.separator + aTempList);
+			}
+			if (temp.isFile()) {
+				temp.delete();
+			}
+			if (temp.isDirectory()) {
+				delAllFile(path + "/" + aTempList);//先删除文件夹里面的文件
+				delFolder(path + "/" + aTempList);//再删除空文件夹
+				flag = true;
+			}
+		}
+		return flag;
+	}
+
+	//删除文件夹
+	//param folderPath 文件夹完整绝对路径
+
+	public static void delFolder(String folderPath) {
+		try {
+			delAllFile(folderPath); //删除完里面所有内容
+			File myFilePath = new File(folderPath);
+			boolean success = myFilePath.delete(); //删除空文件夹
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 	
 	public static boolean isFileEmpty4(File file) {
 		return file.length() == 0L;

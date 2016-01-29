@@ -1,10 +1,15 @@
-<!DOCTYPE html>
+<%--suppress ALL --%>
+<%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
 <html>
     
     <head>
         <title>Statistics</title>
         <!-- Bootstrap -->
         <link href="<%=request.getContextPath()%>/styles/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="<%=request.getContextPath()%>/styles/bootstrap/css/bootstrap-multiselect.css" rel="stylesheet" media="screen">
         <link href="<%=request.getContextPath()%>/styles/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
         <link href="<%=request.getContextPath()%>/styles/assets/styles.css" rel="stylesheet" media="screen">
         <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="<%=request.getContextPath()%>/styles/vendors/flot/excanvas.min.js"></script><![endif]-->
@@ -131,13 +136,13 @@
                 <div class="span3" id="sidebar">
                     <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
                         <li>
-                            <a href="index.html"><i class="icon-chevron-right"></i> Dashboard</a>
+                            <a href="/index"><i class="icon-chevron-right"></i> Dashboard</a>
                         </li>
                         <li>
                             <a href="calendar.html"><i class="icon-chevron-right"></i> Calendar</a>
                         </li>
                         <li class="active">
-                            <a href="stats.html"><i class="icon-chevron-right"></i> Statistics (Charts)</a>
+                            <a href="/analysis"><i class="icon-chevron-right"></i> Statistics (Charts)</a>
                         </li>
                         <li>
                             <a href="form.html"><i class="icon-chevron-right"></i> Forms</a>
@@ -187,15 +192,26 @@
                         <!-- block -->
                         <div class="block">
                             <div class="navbar navbar-inner block-header">
-                                <div class="muted pull-left">Morris.js stacked</div>
-                                <div class="pull-right"><span class="badge badge-warning">View More</span>
+                                <div id="systemState" class="muted pull-left">城市需求量</div>
+                                <div class="pull-right"><span class="badge badge-info">${cityList.size()}</span>
 
                                 </div>
                             </div>
                             <div class="block-content collapse in">
-                                <div class="span12">
-                                    <div id="hero-area" style="height: 250px;"></div>
+
+                                <div class="input-group btn-group">
+                                    <span class="input-group-addon"><b class="glyphicon glyphicon-list-alt"></b></span>
+                                    <select id="multiselect" multiple="multiple">
+                                        <c:forEach items="${cityList}" var="city">
+                                            <option>${city}</option>
+                                        </c:forEach>
+                                    </select>
+
+                                    <button id="startDemandCity" class="btn btn-primary">分析</button>
                                 </div>
+
+
+                                <div id="catchart" style="width:100%;height:200px"></div>
                             </div>
                         </div>
                         <!-- /block -->
@@ -237,7 +253,7 @@
                                 </div>
                                 <div class="span5 chart">
                                     <h5>Month traffic</h5>
-                                    <div id="hero-donut" style="height: 250px;"></div>    
+                                    <div id="hero-donut" style="height: 250px;"></div>
                                 </div>
                             </div>
                         </div>
@@ -255,7 +271,7 @@
                                 </div>
                             </div>
                             <div class="block-content collapse in">
-                                <div class="span3">     
+                                <div class="span3">
                                     <input type="text" value="50" class="knob second" data-thickness=".3" data-inputColor="#333" data-fgColor="#30a1ec" data-bgColor="#d4ecfd" data-width="140">
                                 </div>
                                 <div class="span3">
@@ -283,9 +299,7 @@
                                 </div>
                             </div>
                             <div class="block-content collapse in">
-                                <div class="span12">
-                                    <div id="catchart" style="width:100%;height:300px"></div>
-                                </div>
+
                             </div>
                         </div>
                         <!-- /block -->
@@ -354,33 +368,135 @@
         <script src="<%=request.getContextPath()%>/styles/vendors/morris/morris.min.js"></script>
 
         <script src="<%=request.getContextPath()%>/styles/bootstrap/js/bootstrap.min.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/bootstrap/js/bootstrap-multiselect.js"></script>
         <script src="<%=request.getContextPath()%>/styles/vendors/flot/jquery.flot.js"></script>
         <script src="<%=request.getContextPath()%>/styles/vendors/flot/jquery.flot.categories.js"></script>
         <script src="<%=request.getContextPath()%>/styles/vendors/flot/jquery.flot.pie.js"></script>
         <script src="<%=request.getContextPath()%>/styles/vendors/flot/jquery.flot.time.js"></script>
         <script src="<%=request.getContextPath()%>/styles/vendors/flot/jquery.flot.stack.js"></script>
+        <script src="<%=request.getContextPath()%>/styles/vendors/flot/jquery.flot.symbol.js"></script>
         <script src="<%=request.getContextPath()%>/styles/vendors/flot/jquery.flot.resize.js"></script>
 
         <script src="<%=request.getContextPath()%>/styles/assets/scripts.js"></script>
         <script>
         $(function() {
-            var data = [ ["January", 10], ["February", 8], ["March", 4], ["April", 13], ["May", 17], ["June", 9] ];
 
-            $.plot("#catchart", [ data ], {
-                series: {
-                    bars: {
-                        show: true,
-                        barWidth: 0.6,
-                        align: "center"
-                    }
-                },
-                xaxis: {
-                    mode: "categories",
-                    tickLength: 0
-                }
+            $('#multiselect').multiselect({
+                includeSelectAllOption: true,
+                enableFiltering: true,
+                maxHeight: 150
             });
 
-            var data = [],
+            var dataAnalysisDemandByCity = {
+                submitData: function(citys) {
+                    $.ajax({
+                        url : "/analysis/analysisDemandByCity",
+                        type : "POST",
+                        dataType : "text",
+                        data: {citys : citys},
+                        contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                        success: function(data, dataStatus) {
+                            returnJson = eval("(" + data + ")");
+                            if(parseInt(returnJson.errcode) === 0) {
+                                //
+                                var chartDataByPosition = []
+                                var chartDataByCompany = []
+                                $.each(returnJson.data, function(i, item) {
+                                    var counts = item.split(",");
+                                    var childEByPosition = [];
+                                    var childEByCompany = [];
+                                    childEByPosition.push(i);
+                                    childEByPosition.push(parseInt(counts[0]));
+                                    childEByCompany.push(i);
+                                    childEByCompany.push(parseInt(counts[1]));
+
+                                    chartDataByPosition.push(childEByPosition);
+                                    chartDataByCompany.push(childEByCompany);
+                                });
+
+                                var dataSet = [
+                                    {
+                                        label : "职位",
+                                        data: chartDataByPosition,
+                                        color: "#DC5625",
+                                        bars:{
+                                            show: true,
+                                            align: "center",
+                                            barWidth: 0.6,
+                                            lineWidth:1
+                                        }
+                                    }, {
+                                        label : "公司",
+                                        data: chartDataByCompany,
+                                        yaxis: 2,
+                                        color: "#007ACC",
+                                        points: { symbol: "triangle", fillColor: "#007ACC", show: true },
+                                        lines: {show:true}
+                                    }
+                                ]
+
+                                var options = {
+                                    xaxis: {
+                                        mode: "categories",
+                                        tickLength: 0,
+                                        autoscaleMargin: .10,
+                                        axisLabelFontFamily: 'Verdana, Arial',
+                                        color: "black"
+                                    },
+                                    yaxes: [{
+                                        position: "left",
+                                        color: "black",
+                                    }],
+                                    legend: {
+                                        labelBoxBorderColor: "#000000",
+                                        position: "nw"
+                                    },
+                                    grid: {
+                                        hoverable: true,
+                                        borderWidth: 3,
+                                        backgroundColor: { colors: ["#ffffff", "#EDF5FF"] }
+                                    }
+                                }
+                                $.plot($("#catchart"), dataSet, options);
+
+                                /*$.plot($("#catchart"), [chartDataByPosition, chartDataByCompany], {
+                                    series: {
+                                        bars: {
+                                            show: true,
+                                            barWidth: 0.6,
+                                            align: "center",
+                                            horizontal: false
+                                        }
+                                    },
+                                    yaxes: {
+                                        min: 0
+                                    },
+                                    xaxis: {
+                                        mode: 'categories',
+                                        autoscaleMargin: .10
+                                    },
+
+                                    colors: ["#DC5625", "#007ACC"],
+                                });*/
+                            }
+                        },
+                        error: dataAnalysisDemandByCity.onError
+                    });
+                },
+                onError: function () {
+                    console.log("dataAnalysisDemandByCity error");
+                }
+            };
+            $('#startDemandCity').bind('click', function() {
+                var citys = '';
+                $("#multiselect option:selected").each(function () {
+                    citys += $(this).text() + ",";
+                });
+                dataAnalysisDemandByCity.submitData(citys.substring(0, citys.lastIndexOf(",")));
+            });
+
+
+            var data =  [],
             series = Math.floor(Math.random() * 6) + 3;
 
             for (var i = 0; i < series; i++) {
@@ -392,14 +508,14 @@
 
             $.plot('#piechart1', data, {
                 series: {
-                    pie: { 
+                    pie: {
                         show: true,
                         radius: 1,
                         label: {
                             show: true,
                             radius: 3/4,
                             formatter: labelFormatter,
-                            background: { 
+                            background: {
                                 opacity: 0.5,
                                 color: '#000'
                             }

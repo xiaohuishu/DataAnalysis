@@ -171,7 +171,7 @@
                     <a href="analysis/calendar.jsp"><i class="icon-chevron-right"></i> Calendar</a>
                 </li>
                 <li>
-                    <a href="analysis/stats.jsp"><i class="icon-chevron-right"></i> Statistics (Charts)</a>
+                    <a href="/analysis"><i class="icon-chevron-right"></i> Statistics (Charts)</a>
                 </li>
                 <li>
                     <a href="analysis/form.jsp"><i class="icon-chevron-right"></i> Forms</a>
@@ -304,7 +304,7 @@
                 <div class="block">
                     <div class="navbar navbar-inner block-header">
                         <div id="crawDataDir" class="muted pull-left">已抓取数据目录</div>
-                        <div id="crawDataDirs" class="pull-right"><span class="badge badge-info">3</span>
+                        <div id="crawDataDirs" class="pull-right"><span class="badge badge-info">20</span>
 
                         </div>
                     </div>
@@ -333,179 +333,52 @@
             </div>
 
             <div class="row-fluid">
-                <div class="span6">
-                    <!-- block -->
-                    <div class="block">
-                        <div class="navbar navbar-inner block-header">
-                            <div class="muted pull-left">Users</div>
-                            <div class="pull-right"><span class="badge badge-info">1,234</span>
+                <div id="craw-Info">
 
-                            </div>
-                        </div>
-                        <div class="block-content collapse in">
-                            <table class="table table-striped">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Username</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Vincent</td>
-                                    <td>Gabriel</td>
-                                    <td>@gabrielva</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <!-- /block -->
                 </div>
-                <div class="span6">
-                    <!-- block -->
-                    <div class="block">
-                        <div class="navbar navbar-inner block-header">
-                            <div class="muted pull-left">Orders</div>
-                            <div class="pull-right"><span class="badge badge-info">752</span>
+                <%--<div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <h4>Success</h4>
+                    The operation completed successfully</div>--%>
+                <!-- block -->
+                <div class="block">
 
-                            </div>
+                    <div class="navbar navbar-inner block-header">
+                        <div class="muted pull-left">
+                            选择城市：
+                            <select id="citySelectSearch" class="chzn-select">
+                                <c:forEach items="${cityList}" var="city">
+                                    <option>${city}</option>
+                                </c:forEach>
+                            </select>
+                            &nbsp;&nbsp;&nbsp;
+                            选择职位类型：
+                            <select id="psTypeSelectSearch" class="chzn-select">
+                                <c:forEach items="${psTypeList}" var="psType">
+                                    <option>${psType}</option>
+                                </c:forEach>
+                            </select>
                         </div>
-                        <div class="block-content collapse in">
-                            <table class="table table-striped">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Product</th>
-                                    <th>Date</th>
-                                    <th>Amount</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Coat</td>
-                                    <td>02/02/2013</td>
-                                    <td>$25.12</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jacket</td>
-                                    <td>01/02/2013</td>
-                                    <td>$335.00</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Shoes</td>
-                                    <td>01/02/2013</td>
-                                    <td>$29.99</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                        <div class="pull-right">
+                            <button id="startCrawSearch" class="btn btn-primary">开始查询</button>
                         </div>
                     </div>
-                    <!-- /block -->
-                </div>
-            </div>
-            <div class="row-fluid">
-                <div class="span6">
-                    <!-- block -->
-                    <div class="block">
-                        <div class="navbar navbar-inner block-header">
-                            <div class="muted pull-left">Clients</div>
-                            <div class="pull-right"><span class="badge badge-info">17</span>
 
-                            </div>
-                        </div>
-                        <div class="block-content collapse in">
-                            <table class="table table-striped">
-                                <thead>
+                    <div id="crawDataSearchShow" class="block-content collapse in">
+                        <table class='table table-striped'>
+                            <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Username</th>
+                                    <th>职位</th>
+                                    <th>公司</th>
+                                    <th>情况</th>
+                                    <th>投递数</th>
                                 </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Vincent</td>
-                                    <td>Gabriel</td>
-                                    <td>@gabrielva</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <!-- /block -->
-                </div>
-                <div class="span6">
-                    <!-- block -->
-                    <div class="block">
-                        <div class="navbar navbar-inner block-header">
-                            <div class="muted pull-left">Invoices</div>
-                            <div class="pull-right"><span class="badge badge-info">812</span>
+                            </thead>
+                            <tbody id="tbodySearch">
 
-                            </div>
-                        </div>
-                        <div class="block-content collapse in">
-                            <table class="table table-striped">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Date</th>
-                                    <th>Amount</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>02/02/2013</td>
-                                    <td>$25.12</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>01/02/2013</td>
-                                    <td>$335.00</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>01/02/2013</td>
-                                    <td>$29.99</td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                            </tbody>
+                        </table>
                     </div>
-                    <!-- /block -->
                 </div>
             </div>
         </div>
@@ -536,6 +409,39 @@
 <script>
     $(function () {
 
+        var dataSearch = {
+
+            submitData: function(psType, city) {
+                $.ajax({
+                    url : "/index/crawDataSearch",
+                    type : "POST",
+                    dataType : "text",
+                    data: {psType : psType, city : city},
+                    contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                    success: function(data, dataStatus) {
+                        $('#tbodySearch').html("");
+                        returnJson = eval("(" + data + ")");
+                        if(parseInt(returnJson.errcode) === 0) {
+                            var dataList = returnJson.data.result;
+                            $.each(dataList, function (i, item) {
+                                $('#tbodySearch').append("<tr><td>" + item.positionName + "</td><td>"
+                                        + item.companyShortName + "</td><td>" + item.financeStage +
+                                        "</td><td>" + item.deliverCount + "</td></tr>");
+                            });
+                        } else {
+                            alert("查询无数据，数据未抓取或者加载");
+                        }
+                        $("#startCrawSearch").attr("class", "btn btn-primary");
+                        $("#startCrawSearch").attr("disabled", false);
+                        $("#startCrawSearch").text("开始查询");
+                    },
+                    error: dataSearch.onError
+                });
+            },
+            onError: function () {
+                console.log("dataSearch error");
+            }
+        };
         var crawDirList = {
 
             crawDirData : '',
@@ -548,6 +454,23 @@
                     success: crawDirList.onSuccess,
                     error: crawDirList.onError
                 });
+            },
+
+            reloadCrawl : function (psType) {
+
+                $.ajax({
+                    url : "/index/crawlDataAll",
+                    type : "POST",
+                    dataType : "text",
+                    data : { psType : psType },
+                    success : function (data, dataStatus) {
+                        alert("后台正在抓取数据...");
+                        $('#crawDataDbSubmit').remove();
+                        $('#reloadCrawData').remove();
+                    },
+                    error : crawDirList.onError
+                });
+
             },
 
             crawDataToDb : function (psType) {
@@ -586,9 +509,11 @@
                             $('#crawDataShow #crawDataContent').append("</tbody></table>");
                             if (!isLoad) {
                                 $('#crawDataShow #crawDataFoot').html("<button class='btn' data-dismiss='modal' aria-hidden='true'>关闭" +
-                                        "</button><button id='crawDataDbSubmit' class='btn btn-primary'>加载入库</button>");
+                                        "</button><button id='crawDataDbSubmit' class='btn btn-primary'>加载入库</button><button id='reloadCrawData' class='btn btn-primary'>重新抓取数据</button>");
 
                                 $('#crawDataDbSubmit').click(submitEvent);
+                                $('#reloadCrawData').click(reloadCrawl);
+
                                 function submitEvent() {
                                     crawDirList.crawDataToDb(psType);
                                 }
@@ -597,7 +522,12 @@
                             }
                         } else {
                             $('#crawDataShow #crawDataContent').append("<p>目录不存在或者数据异常，请重新抓取数据</p>");
-                            $('#crawDataShow #crawDataFoot').html("<button class='btn' data-dismiss='modal' aria-hidden='true'>关闭</button>");
+                            $('#crawDataShow #crawDataFoot').html("<button class='btn' data-dismiss='modal' aria-hidden='true'>关闭</button>" +
+                                    "<button id='reloadCrawData' class='btn btn-primary'>重新抓取数据</button>");
+                            $('#reloadCrawData').click(reloadCrawl);
+                        }
+                        function reloadCrawl() {
+                            crawDirList.reloadCrawl(psType);
                         }
                     },
                     error: crawDirList.onError
@@ -719,6 +649,15 @@
             var psType = $("#psTypeSelect option:selected").text();
             var city = $("#citySelect option:selected").text();
             crawLagouData.crawData(city, psType);
+        });
+
+        $('#startCrawSearch').bind("click", function () {
+            var psType = $("#psTypeSelectSearch option:selected").text();
+            var city = $("#citySelectSearch option:selected").text();
+            $("#startCrawSearch").attr("class", "btn btn-info");
+            $("#startCrawSearch").text("正在查询");
+            $("#startCrawSearch").attr("disabled", true);
+            dataSearch.submitData(psType, city);
         });
 
         // Morris Bar Chart

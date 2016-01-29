@@ -34,6 +34,16 @@
           <option value="scrapy.lagou.ord" />
           <option value="scrapy.lagou.range" />
           <option value="scrapy.lagou.unicode" />
+          <option value="scrapy.pinyin.reload" />
+          <option value="threadpool" />
+          <option value="datetime" />
+          <option value="scrapy.batchlagou.reload" />
+          <option value="scrapy.batchlagou.unicode" />
+          <option value="scrapy.batchlagou.range" />
+          <option value="scrapy.batchlagou.Exception" />
+          <option value="scrapy.pinyin.unicode" />
+          <option value="logging" />
+          <option value="scrapy.logger.logging" />
         </list>
       </option>
     </inspection_tool>

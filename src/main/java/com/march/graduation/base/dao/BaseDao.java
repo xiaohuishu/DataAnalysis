@@ -10,10 +10,10 @@ import org.springframework.jdbc.support.KeyHolder;
 
 import java.util.List;
 
-// ********************************************
+//********************************************
 // * @author: xiaohui.shu
 // * @version: 日期: 16-1-22 时间: 下午12:59
-// ********************************************
+//********************************************
 public class BaseDao extends NamedParameterJdbcDaoSupport {
 
     private static final String DEFAULT_KEY_NAME = "id";
@@ -54,5 +54,10 @@ public class BaseDao extends NamedParameterJdbcDaoSupport {
 
         return this.getNamedParameterJdbcTemplate().batchUpdate(sql,
                 params.toArray(new SqlParameterSource[params.size()]));
+    }
+
+
+    public int queryBySql(String sql, Object... args) {
+        return this.getJdbcTemplate().queryForInt(sql, args);
     }
 }

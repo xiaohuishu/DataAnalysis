@@ -11,8 +11,13 @@
         <property name="url" value="${dataAnalysis.master.url}"/>
         <property name="username" value="${dataAnalysis.master.username}"/>
         <property name="password" value="${dataAnalysis.master.password}"/>
-        <property name="filters" value=""/>
-
+        <property name="filters" value="log4j"/>
+        <property name="proxyFilters">
+            <list>
+                <ref bean="stat-filter" />
+                <ref bean="wall-filter" />
+            </list>
+        </property>
         <property name="maxActive" value="${dataAnalysis.master.max_conn}"/>
         <property name="initialSize" value="${dataAnalysis.master.init_conn}"/>
         <property name="maxWait" value="60000"/>
@@ -26,5 +31,14 @@
         <property name="poolPreparedStatements" value="false"/>
     </bean>
 
+    <bean id="stat-filter" class="com.alibaba.druid.filter.stat.StatFilter">
+        <property name="slowSqlMillis" value="10000" />
+        <property name="logSlowSql" value="true" />
+        <property name="mergeSql" value="true" />
+    </bean>
+
+    <bean id="wall-filter" class="com.alibaba.druid.wall.WallFilter">
+        <property name="dbType" value="mysql" />
+    </bean>
 
 </beans>

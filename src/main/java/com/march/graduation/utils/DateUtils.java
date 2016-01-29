@@ -1,6 +1,4 @@
-/*
- * $Id$ Copyright (c) 2012 Qunar.com. All Rights Reserved.
- */
+
 package com.march.graduation.utils;
 
 import org.apache.commons.lang.StringUtils;

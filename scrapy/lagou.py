@@ -24,6 +24,18 @@ def convert_pinyin(str):
             if str in line:
                 return line[length:len(line) - 3]
 
+def getCityList():
+    print cur_file_dir()
+    cityList = []
+    with open(cur_file_dir() + '/data/city.txt', 'r+') as reader:
+        for city in reader.readlines():
+            rcity = city.strip('\n')
+            if rcity == "全国":
+                continue
+            else:
+                cityList.append(rcity)
+    return cityList
+
 def cur_file_dir():
     path = sys.path[0]
     if os.path.isdir(path):
@@ -125,7 +137,8 @@ def parseJson(jsonList, city, position):
         for cindex in range(len(city)):
             clist.append(convert_pinyin(city[cindex:cindex + 1]))
         if clist:
-            pinyin_city = ''.join(clist).replace("chong2,", "")
+            pinyin_city = ''.join(clist).replace("chong2,", "").replace("ji4,", "")
+            print pinyin_city
 
     if position.startswith('web'):
         plist = []

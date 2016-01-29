@@ -3,6 +3,8 @@ package com.march.graduation.service.position.impl;
 import com.google.common.collect.Lists;
 import com.march.graduation.dao.position.IPositionDao;
 import com.march.graduation.execute.FutureHelper;
+import com.march.graduation.model.Condition;
+import com.march.graduation.model.Limit;
 import com.march.graduation.model.craw.RecruitmentInfo;
 import com.march.graduation.service.position.IPositionService;
 import org.apache.commons.collections.CollectionUtils;
@@ -69,5 +71,20 @@ public class PositionServiceImpl implements IPositionService, InitializingBean {
     @Override
     public long insertPositionData(RecruitmentInfo recruitmentInfo) {
         return positionDao.insertPositionData(recruitmentInfo);
+    }
+
+    @Override
+    public List<RecruitmentInfo> queryByCondition(Condition condition, Limit limit) {
+        return positionDao.queryByCondition(condition, limit);
+    }
+
+    @Override
+    public int queryCountByCondition(Condition condition) {
+        return positionDao.queryCountByCondition(condition);
+    }
+
+    @Override
+    public int queryForInt(String sql, Object... args) {
+        return positionDao.queryBySql(sql, args);
     }
 }

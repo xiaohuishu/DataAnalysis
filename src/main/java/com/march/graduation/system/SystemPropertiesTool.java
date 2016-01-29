@@ -46,6 +46,12 @@ public class SystemPropertiesTool {
             }
         } catch (IOException e) {
             logger.error("getMemInfo exec failure: {}", e);
+        } finally {
+            try {
+                br.close();
+            } catch (IOException e) {
+                logger.error("buffer close failure: {}", e);
+            }
         }
 
         return result;

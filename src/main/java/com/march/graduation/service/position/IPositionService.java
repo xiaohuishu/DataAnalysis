@@ -1,5 +1,7 @@
 package com.march.graduation.service.position;
 
+import com.march.graduation.model.Condition;
+import com.march.graduation.model.Limit;
 import com.march.graduation.model.craw.RecruitmentInfo;
 
 import java.util.List;
@@ -13,4 +15,10 @@ public interface IPositionService {
     boolean batchInsertPositionData(List<RecruitmentInfo> recruitmentInfoList, boolean isAsy);
 
     long insertPositionData(RecruitmentInfo recruitmentInfo);
+
+    List<RecruitmentInfo> queryByCondition(Condition condition, Limit limit);
+
+    int queryCountByCondition(Condition condition);
+
+    int queryForInt(String sql, Object... args);
 }

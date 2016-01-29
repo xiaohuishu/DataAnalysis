@@ -7,6 +7,8 @@ import com.google.common.cache.RemovalNotification;
 import com.google.common.collect.Lists;
 import com.march.graduation.constant.CacheKeyConstant;
 import com.march.graduation.model.AnalysisResultCode;
+import com.march.graduation.model.Condition;
+import com.march.graduation.model.Limit;
 import com.march.graduation.model.craw.RecruitmentInfo;
 import com.march.graduation.redis.ShardJedisClient;
 import com.march.graduation.service.position.IPositionService;
@@ -69,40 +71,82 @@ public class IndexController implements InitializingBean {
     public ModelAndView index() {
         ModelAndView modelAndView = new ModelAndView("index");
         logger.info(crawRootPath);
-        Path path = Paths.get(crawRootPath, "scrapy", "data", "position.txt");
-        File psTypeFile = path.toFile();
-        final String command = "python " + crawRootPath + "/scrapy/lagou.py";
-        if (!psTypeFile.exists()) {
-            Thread thread = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        Runtime.getRuntime().exec(command);
-                    } catch (IOException e) {
-                        logger.error("exec python failure: {}", e);
-                    }
-                }
-            });
-            thread.start();
-            return modelAndView;
-        } else {
-            try {
-                List<String> psTypeList = Files.readAllLines(path, Charset.defaultCharset());
-                if (CollectionUtils.isNotEmpty(psTypeList)) {
-                    modelAndView.addObject("psTypeList", psTypeList);
-                }
 
-                List<String> cityList = Files.readAllLines(Paths.get(crawRootPath, "scrapy", "data", "city.txt"),
-                        Charset.defaultCharset());
-                if (CollectionUtils.isNotEmpty(cityList)) {
-                    modelAndView.addObject("cityList", cityList);
-                }
-
-            } catch (IOException e) {
-                logger.error("read {} failure: {}", psTypeFile.getName(), e);
+        if(shardJedisClient.exists(CacheKeyConstant.CITY_LIST_KEY) && shardJedisClient.exists(CacheKeyConstant.POSITION_LIST_KEY)) {
+            List<String> cityList = shardJedisClient.lrange(CacheKeyConstant.CITY_LIST_KEY, 0, -1);
+            List<String> psTypeList = shardJedisClient.lrange(CacheKeyConstant.POSITION_LIST_KEY, 0, -1);
+            if(CollectionUtils.isNotEmpty(cityList) && CollectionUtils.isNotEmpty(psTypeList)) {
+                modelAndView.addObject("cityList", cityList);
+                modelAndView.addObject("psTypeList", psTypeList);
             }
-            return modelAndView;
+        } else {
+            Path path = Paths.get(crawRootPath, "scrapy", "data", "position.txt");
+            File psTypeFile = path.toFile();
+            final String command = "python " + crawRootPath + "/scrapy/lagou.py";
+            if (!psTypeFile.exists()) {
+                Thread thread = new Thread(new Runnable() {
+                    @Override public void run() {
+                        try {
+                            Runtime.getRuntime().exec(command);
+                        } catch (IOException e) {
+                            logger.error("exec python failure: {}", e);
+                        }
+                    }
+                });
+                thread.start();
+            } else {
+                try {
+                    List<String> psTypeList = Files.readAllLines(path, Charset.defaultCharset());
+                    if (CollectionUtils.isNotEmpty(psTypeList)) {
+                        shardJedisClient.lpush(CacheKeyConstant.POSITION_LIST_KEY, psTypeList.toArray(new String[psTypeList.size()]));
+                        shardJedisClient.expire(CacheKeyConstant.POSITION_LIST_KEY, 24 * 60 * 1000);
+                        modelAndView.addObject("psTypeList", psTypeList);
+                    }
+
+                    List<String> cityList = Files.readAllLines(Paths.get(crawRootPath, "scrapy", "data", "city.txt"),
+                            Charset.defaultCharset());
+                    if (CollectionUtils.isNotEmpty(cityList)) {
+                        shardJedisClient
+                                .lpush(CacheKeyConstant.CITY_LIST_KEY, cityList.toArray(new String[cityList.size()]));
+                        shardJedisClient.expire(CacheKeyConstant.CITY_LIST_KEY, 24 * 60 * 1000);
+                        modelAndView.addObject("cityList", cityList);
+                    }
+
+                } catch (IOException e) {
+                    logger.error("read {} failure: {}", psTypeFile.getName(), e);
+                }
+            }
         }
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "crawDataSearch", method = RequestMethod.POST)
+    public JsonAndView crawDataSearch(@RequestParam(value = "psType", defaultValue = "") String psType,
+            @RequestParam(value = "city", defaultValue = "") String city,
+            @RequestParam(value = "pageNo", defaultValue = "0") int pageNo,
+            @RequestParam(value = "limit", defaultValue = "20") int limitSize) {
+
+        if(StringUtils.isBlank(psType) && StringUtils.isBlank(city)) {
+            return AnalysisResultCode.ILLEGAL_ERROR.getJsonAndView();
+        }
+        psType = replaceSpecial(psType.toLowerCase());
+
+        Condition condition = new Condition();
+        condition.setValue(psType);
+        if(StringUtils.equals(city, "全国")) {
+            condition.setSecondValue("all");
+        } else {
+            condition.setSecondValue(city);
+        }
+        //int totalSize = positionService.queryCountByCondition(condition);
+        Limit limit = new Limit(pageNo * limitSize, limitSize);
+        List<RecruitmentInfo> recruitmentInfoList = positionService.queryByCondition(condition, limit);
+        if(CollectionUtils.isEmpty(recruitmentInfoList)) {
+            return AnalysisResultCode.NOT_EXIST_ERROR.getJsonAndView();
+        }
+        JsonAndView jsonAndView = AnalysisResultCode.SUCCESS_INFO.getJsonAndView();
+        jsonAndView.addData("result", recruitmentInfoList);
+        return jsonAndView;
     }
 
     @RequestMapping(value = "crawDataToDb", method = RequestMethod.GET)
@@ -274,6 +318,48 @@ public class IndexController implements InitializingBean {
         }
         return AnalysisResultCode.NOT_EXIST_ERROR.getJsonAndView();
     }
+
+    @RequestMapping(value = "/crawlDataAll", method = RequestMethod.POST)
+    public JsonAndView crawDataAll(@RequestParam(value = "psType", defaultValue = "") String psType) {
+        if (StringUtils.isBlank(psType)) {
+            return AnalysisResultCode.ILLEGAL_ERROR.getJsonAndView();
+        }
+        String pythonFilePath = crawRootPath + "/scrapy/batchlagou.py ";
+
+        psType = replaceSpecial(psType);
+
+        File positionDir = Paths.get(crawRootPath, "scrapy", "data", "positionData", psType).toFile();
+
+        if(positionDir.exists()) {
+            if(!EmptyFileChecker.delAllFile(positionDir.getAbsolutePath())){
+                logger.info("delete [dir: {}] failure", positionDir.getAbsolutePath());
+            } else {
+                logger.info("delete [dir: {}] success", positionDir.getAbsolutePath());
+            }
+        }
+        final String cacheKey = String.format(CacheKeyConstant.POSITION_TYPE_DATA, psType);
+        if (shardJedisClient.exists(cacheKey)) {
+            shardJedisClient.del(cacheKey);
+        }
+
+        final String command = "python " + pythonFilePath + psType;
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Runtime.getRuntime().exec(command);
+                } catch (IOException e) {
+                    logger.error("exec python failure: {}", e);
+                }
+            }
+        });
+        thread.start();
+        JsonAndView jsonAndView = AnalysisResultCode.SUCCESS_INFO.getJsonAndView();
+        jsonAndView.addData("psType", psType);
+
+        return jsonAndView;
+    }
+
 
     @RequestMapping(value = "/crawlData", method = RequestMethod.POST)
     public JsonAndView crawlLagouData(@RequestParam(value = "positionType", defaultValue = "") String positiopnType,

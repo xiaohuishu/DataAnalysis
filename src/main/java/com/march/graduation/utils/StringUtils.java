@@ -1,15 +1,8 @@
-/*
- * $Id$
- *
- * Copyright (c) 2012 Qunar.com. All Rights Reserved.
- */
+
 package com.march.graduation.utils;
 
 import org.apache.commons.lang.CharUtils;
 
-//--------------------- Change Logs----------------------
-// <p>@author wangqiuyi Initial Created at 2012-9-21<p>
-//-------------------------------------------------------
 public class StringUtils {
 
     /**

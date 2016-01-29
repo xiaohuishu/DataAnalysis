@@ -6,7 +6,14 @@ package com.march.graduation.execute;
 //********************************************
 public class FutureBlockException extends Exception {
 
+    private String message;
+
     public FutureBlockException(String message) {
         super(message);
+        this.message = message;
+    }
+
+    @Override public String getMessage() {
+        return message;
     }
 }

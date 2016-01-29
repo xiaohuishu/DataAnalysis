@@ -17,8 +17,28 @@
         <property name="positionService" ref="positionService" />
     </bean>
 
-    <bean id="userController" class="com.march.graduation.controller.UserController">
+    <bean id="analysisController" class="com.march.graduation.controller.AnalysisController">
+        <property name="positionService" ref="positionService" />
+        <property name="shardJedisClient" ref="jedisClient" />
+    </bean>
 
+    <bean id="userController" class="com.march.graduation.controller.UserController">
+        <property name="userList">
+            <list>
+                <ref bean="admin" />
+                <ref bean="normal" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id = "admin" class="com.march.graduation.model.User">
+        <constructor-arg index="0" value="${admin.username}"/>
+        <constructor-arg index="1" value="${admin.password}"/>
+    </bean>
+
+    <bean id = "normal" class="com.march.graduation.model.User">
+        <constructor-arg index="0" value="${normal.username}"/>
+        <constructor-arg index="1" value="${normal.password}"/>
     </bean>
 
     <bean id="monitorCometController" class="com.march.graduation.controller.MonitorCometController">

@@ -10,6 +10,7 @@ public class RecruitmentInfo implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    private int id;
     private int orderBy;
     private String leaderName;
     private String companySize;
@@ -297,5 +298,13 @@ public class RecruitmentInfo implements Serializable {
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

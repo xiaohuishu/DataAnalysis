@@ -2496,20 +2496,23 @@ Licensed under the MIT license.
             ctx.strokeStyle = series.color;
 
             var barLeft;
-
-            switch (series.bars.align) {
-                case "left":
-                    barLeft = 0;
-                    break;
-                case "right":
-                    barLeft = -series.bars.barWidth;
-                    break;
-                case "center":
-                    barLeft = -series.bars.barWidth / 2;
-                    break;
-                default:
-                    throw new Error("Invalid bar alignment: " + series.bars.align);
-            }
+			if(series.bars.barLeft != undefined){
+				barLeft = series.bars.barLeft;
+			}else {
+				switch (series.bars.align) {
+					case "left":
+						barLeft = 0;
+						break;
+					case "right":
+						barLeft = -series.bars.barWidth;
+						break;
+					case "center":
+						barLeft = -series.bars.barWidth / 2;
+						break;
+					default:
+						throw new Error("Invalid bar alignment: " + series.bars.align);
+				}
+			}
 
             var fillStyleCallback = series.bars.fill ? function (bottom, top) { return getFillStyle(series.bars, series.color, bottom, top); } : null;
             plotBars(series.datapoints, barLeft, barLeft + series.bars.barWidth, 0, fillStyleCallback, series.xaxis, series.yaxis);

@@ -72,7 +72,7 @@
       <column name="relScore" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="formatCreateTime" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
       <column name="salary" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
-      <column name="positionName" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="positionName" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
       <column name="companyName" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
       <column name="jobNature" sqlType="VARCHAR" precision="30" scale="0" nullable="true" jdbcType="12"/>
       <column name="positionTypesMap" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12"/>
@@ -89,6 +89,16 @@
       <column name="positionAdvantage" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
       <index name="unique_id" unique="true" columns="id"/>
+      <index name="city_index" unique="false" columns="city"/>
+      <index name="positionName_index" unique="false" columns="positionName"/>
+    </table>
+    <table name="test1" schema="" catalog="analysis" type="TABLE">
+      <column name="name" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="name"/>
+    </table>
+    <table name="test2" schema="" catalog="analysis" type="TABLE">
+      <column name="id" sqlType="VARCHAR" precision="5" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
     </table>
   </data-source>
 </component>
