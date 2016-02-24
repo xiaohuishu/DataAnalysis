@@ -219,7 +219,7 @@
 
         <!-- pinyin4j -->
         <dependency>
-            <groupId>net.sourceforge</groupId>
+            <groupId>com.belerweb</groupId>
             <artifactId>pinyin4j</artifactId>
             <version>2.5.0</version>
         </dependency>
@@ -236,6 +236,13 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>${druid-version}</version>
+        </dependency>
+
+        <!-- sigar -->
+        <dependency>
+            <groupId>org.fusesource</groupId>
+            <artifactId>sigar</artifactId>
+            <version>1.6.4</version>
         </dependency>
 
     </dependencies>

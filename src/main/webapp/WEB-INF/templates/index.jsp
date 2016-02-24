@@ -712,6 +712,10 @@
                         var res = String($.trim(data));
                         var dataArray = res.split("\t");
                         updater.rate = parseInt(dataArray[0] * 100);
+                        if(updater.rate == 0){
+                            alert("当前系统未读取到cpu数据!")
+                            updater.stop = true;
+                        }
                         $("#totalMemory").text(' ' + dataArray[1]);
                         $("#freeMemory").text(' ' + dataArray[2]);
                         if(dataArray.length == 4) {

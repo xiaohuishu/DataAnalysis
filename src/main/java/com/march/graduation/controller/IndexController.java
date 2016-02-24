@@ -17,6 +17,7 @@ import com.march.graduation.utils.HanyuConvertPinyinHelper;
 import com.march.graduation.utils.JsonUtils;
 import com.march.graduation.view.JsonAndView;
 import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.io.Charsets;
 import org.apache.commons.lang3.StringUtils;
 import org.codehaus.jackson.type.TypeReference;
 import org.slf4j.Logger;
@@ -34,24 +35,24 @@ import java.io.FileFilter;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
-import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-// ********************************************
+//********************************************
 // * @author: xiaohui.shu
 // * @version: 日期: 16-1-18 时间: 下午1:26
-// ********************************************
+//********************************************
 @Controller
 @RequestMapping("/index")
 public class IndexController implements InitializingBean {
 
     private static final Logger logger = LoggerFactory.getLogger(IndexController.class);
 
-    private static final TypeReference<List<RecruitmentInfo>> LIST_RECRUITMENT_TYPE = new TypeReference<List<RecruitmentInfo>>() { };
+    private static final TypeReference<List<RecruitmentInfo>> LIST_RECRUITMENT_TYPE = new TypeReference<List<RecruitmentInfo>>() {
+    };
 
     private String crawRootPath;
 
@@ -67,15 +68,15 @@ public class IndexController implements InitializingBean {
                 }
             }).build();
 
-    @RequestMapping(method = { RequestMethod.GET, RequestMethod.HEAD })
+    @RequestMapping(method = {RequestMethod.GET, RequestMethod.HEAD})
     public ModelAndView index() {
         ModelAndView modelAndView = new ModelAndView("index");
         logger.info(crawRootPath);
 
-        if(shardJedisClient.exists(CacheKeyConstant.CITY_LIST_KEY) && shardJedisClient.exists(CacheKeyConstant.POSITION_LIST_KEY)) {
+        if (shardJedisClient.exists(CacheKeyConstant.CITY_LIST_KEY) && shardJedisClient.exists(CacheKeyConstant.POSITION_LIST_KEY)) {
             List<String> cityList = shardJedisClient.lrange(CacheKeyConstant.CITY_LIST_KEY, 0, -1);
             List<String> psTypeList = shardJedisClient.lrange(CacheKeyConstant.POSITION_LIST_KEY, 0, -1);
-            if(CollectionUtils.isNotEmpty(cityList) && CollectionUtils.isNotEmpty(psTypeList)) {
+            if (CollectionUtils.isNotEmpty(cityList) && CollectionUtils.isNotEmpty(psTypeList)) {
                 modelAndView.addObject("cityList", cityList);
                 modelAndView.addObject("psTypeList", psTypeList);
             }
@@ -85,7 +86,8 @@ public class IndexController implements InitializingBean {
             final String command = "python " + crawRootPath + "/scrapy/lagou.py";
             if (!psTypeFile.exists()) {
                 Thread thread = new Thread(new Runnable() {
-                    @Override public void run() {
+                    @Override
+                    public void run() {
                         try {
                             Runtime.getRuntime().exec(command);
                         } catch (IOException e) {
@@ -96,7 +98,7 @@ public class IndexController implements InitializingBean {
                 thread.start();
             } else {
                 try {
-                    List<String> psTypeList = Files.readAllLines(path, Charset.defaultCharset());
+                    List<String> psTypeList = Files.readAllLines(path, Charsets.UTF_8);
                     if (CollectionUtils.isNotEmpty(psTypeList)) {
                         shardJedisClient.lpush(CacheKeyConstant.POSITION_LIST_KEY, psTypeList.toArray(new String[psTypeList.size()]));
                         shardJedisClient.expire(CacheKeyConstant.POSITION_LIST_KEY, 24 * 60 * 1000);
@@ -104,7 +106,7 @@ public class IndexController implements InitializingBean {
                     }
 
                     List<String> cityList = Files.readAllLines(Paths.get(crawRootPath, "scrapy", "data", "city.txt"),
-                            Charset.defaultCharset());
+                            Charsets.UTF_8);
                     if (CollectionUtils.isNotEmpty(cityList)) {
                         shardJedisClient
                                 .lpush(CacheKeyConstant.CITY_LIST_KEY, cityList.toArray(new String[cityList.size()]));
@@ -122,18 +124,18 @@ public class IndexController implements InitializingBean {
 
     @RequestMapping(value = "crawDataSearch", method = RequestMethod.POST)
     public JsonAndView crawDataSearch(@RequestParam(value = "psType", defaultValue = "") String psType,
-            @RequestParam(value = "city", defaultValue = "") String city,
-            @RequestParam(value = "pageNo", defaultValue = "0") int pageNo,
-            @RequestParam(value = "limit", defaultValue = "20") int limitSize) {
+                                      @RequestParam(value = "city", defaultValue = "") String city,
+                                      @RequestParam(value = "pageNo", defaultValue = "0") int pageNo,
+                                      @RequestParam(value = "limit", defaultValue = "20") int limitSize) {
 
-        if(StringUtils.isBlank(psType) && StringUtils.isBlank(city)) {
+        if (StringUtils.isBlank(psType) && StringUtils.isBlank(city)) {
             return AnalysisResultCode.ILLEGAL_ERROR.getJsonAndView();
         }
         psType = replaceSpecial(psType.toLowerCase().replace(".", "").replace("-", ""));
 
         Condition condition = new Condition();
         condition.setValue(psType);
-        if(StringUtils.equals(city, "全国")) {
+        if (StringUtils.equals(city, "全国")) {
             condition.setSecondValue("all");
         } else {
             condition.setSecondValue(city);
@@ -141,7 +143,7 @@ public class IndexController implements InitializingBean {
         //int totalSize = positionService.queryCountByCondition(condition);
         Limit limit = new Limit(pageNo * limitSize, limitSize);
         List<RecruitmentInfo> recruitmentInfoList = positionService.queryByCondition(condition, limit);
-        if(CollectionUtils.isEmpty(recruitmentInfoList)) {
+        if (CollectionUtils.isEmpty(recruitmentInfoList)) {
             return AnalysisResultCode.NOT_EXIST_ERROR.getJsonAndView();
         }
         JsonAndView jsonAndView = AnalysisResultCode.SUCCESS_INFO.getJsonAndView();
@@ -151,7 +153,7 @@ public class IndexController implements InitializingBean {
 
     @RequestMapping(value = "crawDataToDb", method = RequestMethod.GET)
     public JsonAndView crawDataToDb(@RequestParam(value = "psType", defaultValue = "") String psType,
-            @RequestParam(value = "isAsy", defaultValue = "true") boolean isAsy) {
+                                    @RequestParam(value = "isAsy", defaultValue = "true") boolean isAsy) {
 
         if (StringUtils.isBlank(psType)) {
             return AnalysisResultCode.ILLEGAL_ERROR.getJsonAndView();
@@ -205,13 +207,13 @@ public class IndexController implements InitializingBean {
             List<String> unSerData = shardJedisClient.lrange(cacheKey, 0, -1);
             if (CollectionUtils.isNotEmpty(unSerData)) {
                 List<RecruitmentInfo> recruitmentInfoData = new ArrayList<RecruitmentInfo>(unSerData.size());
-                for (String serData : unSerData) {
-                    try {
+                try {
+                    for (String serData : unSerData) {
                         RecruitmentInfo recruitmentInfo = JsonUtils.toObjectSafe(serData, RecruitmentInfo.class);
                         recruitmentInfoData.add(recruitmentInfo);
-                    } catch (IOException e) {
-                        logger.error("string parse object failure: {}", e);
                     }
+                } catch (IOException e) {
+                    logger.error("string parse object failure: {}", e);
                 }
                 JsonAndView jsonAndView = AnalysisResultCode.SUCCESS_INFO.getJsonAndView();
                 jsonAndView.addData("psType", psType);
@@ -223,7 +225,8 @@ public class IndexController implements InitializingBean {
 
         File[] jsonFiles = jsonPath.toFile().listFiles(new FileFilter() {
 
-            @Override public boolean accept(File pathname) {
+            @Override
+            public boolean accept(File pathname) {
                 if (pathname.isDirectory())
                     return false;
                 else if (pathname.getPath().endsWith(".json"))
@@ -255,7 +258,7 @@ public class IndexController implements InitializingBean {
             return AnalysisResultCode.NOT_EXIST_ERROR.getJsonAndView();
         }
         if (!shardJedisClient.exists(cacheKey)) {
-            String [] jsonStr = new String[totalDataByPsType.size()];
+            String[] jsonStr = new String[totalDataByPsType.size()];
             int index = 0;
             for (RecruitmentInfo recruitmentInfo : totalDataByPsType) {
                 jsonStr[index++] = JsonUtils.objectToJsonString(recruitmentInfo);
@@ -278,25 +281,26 @@ public class IndexController implements InitializingBean {
         File positionDir = Paths.get(crawRootPath, "scrapy", "data", "positionData").toFile();
         File[] files = positionDir.listFiles(new FileFilter() {
 
-            @Override public boolean accept(File pathname) {
+            @Override
+            public boolean accept(File pathname) {
                 return pathname.isDirectory();
             }
         });
-        if(files == null || files.length <= 0) {
+        if (files == null || files.length <= 0) {
             return AnalysisResultCode.ILLEGAL_ERROR.getJsonAndView();
         }
         List<String> dirNameList = new ArrayList<String>(files.length);
-        for(File file : files) {
+        for (File file : files) {
             String dirPath = file.getAbsolutePath().substring(file.getAbsolutePath().lastIndexOf("/") + 1, file.getAbsolutePath().length());
             //noinspection ConstantConditions
-            if(loadCache.getIfPresent(dirPath) != null) {
+            if (loadCache.getIfPresent(dirPath) != null) {
                 dirNameList.add(dirPath + "_true");
             } else {
                 dirNameList.add(dirPath);
             }
         }
 
-        if(CollectionUtils.isEmpty(dirNameList)) {
+        if (CollectionUtils.isEmpty(dirNameList)) {
             return AnalysisResultCode.FAILURE_INFO.getJsonAndView();
         }
         JsonAndView jsonAndView = AnalysisResultCode.SUCCESS_INFO.getJsonAndView();
@@ -307,7 +311,7 @@ public class IndexController implements InitializingBean {
 
     @RequestMapping(value = "checkCrawData", method = RequestMethod.POST)
     public JsonAndView checkCrawData(@RequestParam(value = "cityPinyin", defaultValue = "") String cityPinyin,
-            @RequestParam(value = "psTypePinyin", defaultValue = "") String psTypePinyin) {
+                                     @RequestParam(value = "psTypePinyin", defaultValue = "") String psTypePinyin) {
         if (StringUtils.isBlank(cityPinyin) || StringUtils.isBlank(psTypePinyin)) {
             return AnalysisResultCode.ILLEGAL_ERROR.getJsonAndView();
         }
@@ -330,8 +334,8 @@ public class IndexController implements InitializingBean {
 
         File positionDir = Paths.get(crawRootPath, "scrapy", "data", "positionData", psType).toFile();
 
-        if(positionDir.exists()) {
-            if(!EmptyFileChecker.delAllFile(positionDir.getAbsolutePath())){
+        if (positionDir.exists()) {
+            if (!EmptyFileChecker.delAllFile(positionDir.getAbsolutePath())) {
                 logger.info("delete [dir: {}] failure", positionDir.getAbsolutePath());
             } else {
                 logger.info("delete [dir: {}] success", positionDir.getAbsolutePath());
@@ -363,7 +367,7 @@ public class IndexController implements InitializingBean {
 
     @RequestMapping(value = "/crawlData", method = RequestMethod.POST)
     public JsonAndView crawlLagouData(@RequestParam(value = "positionType", defaultValue = "") String positiopnType,
-            @RequestParam(value = "cityName", defaultValue = "") String cityName) {
+                                      @RequestParam(value = "cityName", defaultValue = "") String cityName) {
         if (StringUtils.isBlank(cityName) || StringUtils.isBlank(positiopnType)) {
             return AnalysisResultCode.ILLEGAL_ERROR.getJsonAndView();
         }
@@ -396,7 +400,7 @@ public class IndexController implements InitializingBean {
             return AnalysisResultCode.REPREATE_ERROR.getJsonAndView();
         }
         String args = psTypePinyin + " " + cityName;
-        if(psTypePinyin.startsWith("web")) {
+        if (psTypePinyin.startsWith("web")) {
             args = positiopnType + " " + cityName;
         }
 
@@ -422,10 +426,10 @@ public class IndexController implements InitializingBean {
     }
 
     private String replaceSpecial(String psTypePinyin) {
-        if(StringUtils.equals(psTypePinyin, "cplus")) {
+        if (StringUtils.equals(psTypePinyin, "cplus")) {
             psTypePinyin = "c++";
         }
-        if(StringUtils.equals(psTypePinyin, "cs")) {
+        if (StringUtils.equals(psTypePinyin, "cs")) {
             psTypePinyin = "c#";
         }
         return psTypePinyin;

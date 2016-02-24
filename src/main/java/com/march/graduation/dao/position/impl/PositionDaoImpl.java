@@ -69,11 +69,11 @@ public class PositionDaoImpl extends BaseDao implements IPositionDao {
         if (StringUtils.equals(condition.getSecondValue(), "all")) {
             recruitmentInfoList = this.getJdbcTemplate().query(POSITION_QUERY_SQL_POSITION,
                     new Object[] { "%" + condition.getValue() + "%" },
-                    new BeanPropertyRowMapper<RecruitmentInfo>(RecruitmentInfo.class));
+                    new BeanPropertyRowMapper<>(RecruitmentInfo.class));
         } else {
             recruitmentInfoList = this.getJdbcTemplate().query(POSITION_QUERY_SQL_ALL,
                     new Object[] { "%" + condition.getValue() + "%", condition.getSecondValue() },
-                    new BeanPropertyRowMapper<RecruitmentInfo>(RecruitmentInfo.class));
+                    new BeanPropertyRowMapper<>(RecruitmentInfo.class));
         }
         if (CollectionUtils.isNotEmpty(recruitmentInfoList)) {
             return recruitmentInfoList;

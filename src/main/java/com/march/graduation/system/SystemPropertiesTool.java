@@ -17,16 +17,18 @@ public class SystemPropertiesTool {
 
     private static final Logger logger = LoggerFactory.getLogger(SystemPropertiesTool.class);
 
-    public static long [] processMemoryInfo() {
+    public static long[] processMemoryInfo() {
 
         BufferedReader br = MonitorDataType.MEMORY_DATA_FILE.processFileReturnReader();
+        if (br == null) {
+            return null;
+        }
 
-        long [] result = new  long [4];
+        long[] result = new long[4];
         String str;
         StringTokenizer token;
         try {
-            while ((str = br.readLine()) != null )
-            {
+            while ((str = br.readLine()) != null) {
                 token = new StringTokenizer(str);
                 if (!token.hasMoreTokens()) {
                     continue;
@@ -35,14 +37,14 @@ public class SystemPropertiesTool {
                 if (!token.hasMoreTokens()) {
                     continue;
                 }
-                if (str.equalsIgnoreCase( "MemTotal:" ))
-                    result[0 ] = NumberUtils.toLong(token.nextToken());
-                else  if (str.equalsIgnoreCase( "MemFree:" ))
-                    result[1 ] = NumberUtils.toLong(token.nextToken());
-                else  if (str.equalsIgnoreCase( "SwapTotal:" ))
-                    result[2 ] = NumberUtils.toLong(token.nextToken());
-                else  if (str.equalsIgnoreCase( "SwapFree:" ))
-                    result[3 ] = NumberUtils.toLong(token.nextToken());
+                if (str.equalsIgnoreCase("MemTotal:"))
+                    result[0] = NumberUtils.toLong(token.nextToken());
+                else if (str.equalsIgnoreCase("MemFree:"))
+                    result[1] = NumberUtils.toLong(token.nextToken());
+                else if (str.equalsIgnoreCase("SwapTotal:"))
+                    result[2] = NumberUtils.toLong(token.nextToken());
+                else if (str.equalsIgnoreCase("SwapFree:"))
+                    result[3] = NumberUtils.toLong(token.nextToken());
             }
         } catch (IOException e) {
             logger.error("getMemInfo exec failure: {}", e);
@@ -60,7 +62,7 @@ public class SystemPropertiesTool {
     public static double caculCpuRate() {
         BufferedReader br = MonitorDataType.CPU_DATA_FILE.processFileReturnReader();
 
-        if(br == null) {
+        if (br == null) {
             return 0;
         }
         StringTokenizer token;
@@ -73,7 +75,7 @@ public class SystemPropertiesTool {
             int idle1 = Integer.parseInt(token.nextToken());
 
             try {
-                Thread.sleep(1000 );
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 logger.error("thread sleep failure: {}", e);
             }
@@ -87,11 +89,17 @@ public class SystemPropertiesTool {
             int sys2 = Integer.parseInt(token.nextToken());
             int idle2 = Integer.parseInt(token.nextToken());
 
-            return ( double )((user2 + sys2 + nice2) - (user1 + sys1 + nice1)) / ( double )((user2 + nice2 + sys2 + idle2) - (user1 + nice1 + sys1 + idle1));
+            return (double) ((user2 + sys2 + nice2) - (user1 + sys1 + nice1)) / (double) ((user2 + nice2 + sys2 + idle2) - (user1 + nice1 + sys1 + idle1));
 
         } catch (IOException e) {
             logger.error("getCpuInfo exec failure: {}", e);
         }
         return 0;
     }
+
+    public static void main(String[] args) {
+        logger.info(String.valueOf(SystemPropertiesTool.processMemoryInfo()));
+        logger.info(String.valueOf(SystemPropertiesTool.caculCpuRate()));
+    }
+
 }
