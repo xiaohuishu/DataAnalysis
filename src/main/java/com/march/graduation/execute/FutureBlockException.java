@@ -13,7 +13,8 @@ public class FutureBlockException extends Exception {
         this.message = message;
     }
 
-    @Override public String getMessage() {
+    @Override
+    public String getMessage() {
         return message;
     }
 }

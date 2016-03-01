@@ -55,7 +55,6 @@ public class MonitorCometController implements InitializingBean {
                     printWriter.println(mem.getTotal() + "\t");
                     printWriter.println(mem.getFree() + "\t");
                 }
-                isExitSigar = true;
             }
         } catch (SigarException e) {
             isExitSigar = true;
@@ -84,6 +83,6 @@ public class MonitorCometController implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        logger.info("test: " + System.getProperty("java.library.path"));
+        //logger.info("test: " + System.getProperty("java.library.path"));
     }
 }
