@@ -716,8 +716,8 @@
                             alert("当前系统未读取到cpu数据!")
                             updater.stop = true;
                         }
-                        $("#totalMemory").text(' ' + dataArray[1]);
-                        $("#freeMemory").text(' ' + dataArray[2]);
+                        $("#totalMemory").text(' ' + dataArray[1] + ' MB');
+                        $("#freeMemory").text(' ' + dataArray[2] + ' MB');
                         if(dataArray.length == 4) {
                             if (dataArray[3]) {
                                 alert("批量插入数据成功");

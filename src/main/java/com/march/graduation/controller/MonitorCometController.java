@@ -52,8 +52,8 @@ public class MonitorCometController implements InitializingBean {
             if (mem != null && cpuPerc != null) {
                 if (printWriter != null) {
                     printWriter.println(String.format("%.2f", cpuPerc.getCombined()) + "\t");
-                    printWriter.println(mem.getTotal() + "\t");
-                    printWriter.println(mem.getFree() + "\t");
+                    printWriter.println(mem.getTotal() / (1024 * 1024) + "\t");
+                    printWriter.println(mem.getFree() / (1024 * 1024) + "\t");
                 }
             }
         } catch (SigarException e) {

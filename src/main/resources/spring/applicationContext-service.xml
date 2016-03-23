@@ -8,7 +8,7 @@
     <bean id="positionService" class="com.march.graduation.service.position.impl.PositionServiceImpl">
         <property name="positionDao" ref="positionDao" />
     </bean>
-    
+
     <bean id="adminAuthService" class="com.march.graduation.service.auth.impl.AdminAuthServiceImpl">
         <property name="adminAuthDao" ref="adminAuthDao" />
     </bean>
